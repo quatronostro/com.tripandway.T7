@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class userHomepage {
+public class TawUserHomePage {
 
-    public userHomepage(){PageFactory.initElements(Driver.getDriver(), this);}
+    public TawUserHomePage(){PageFactory.initElements(Driver.getDriver(), this);}
 
     //HomePage >>> Logo
     @FindBy(xpath = "//*[@*='logo']")

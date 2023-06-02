@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class adminPage {
+public class TawAdminPage {
 
-    public adminPage(){PageFactory.initElements(Driver.getDriver(), this);}
+    public TawAdminPage(){PageFactory.initElements(Driver.getDriver(), this);}
 
      //AdminPage >>> SideBar >>> AccordionButton
     @FindBy(id = "accordionSidebar")
