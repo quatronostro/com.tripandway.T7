@@ -44,4 +44,5 @@
 | Kisi Resimleri         | imageProfileX     |
 | ürün resimleri         | imageProductX     |
 | Destionation resimleri | imageDestinationX |
+| Arka Plan resimleri | imageBackgroundX |
 | Linkler                | linkX             |
