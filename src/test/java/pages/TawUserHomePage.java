@@ -12,23 +12,25 @@ import java.util.List;
 
 public class TawUserHomePage {
 
-    public TawUserHomePage(){PageFactory.initElements(Driver.getDriver(), this);}
+    public TawUserHomePage() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
 
     //HomePage >>> LogoImage
     @FindBy(xpath = "//*[@*='logo']")
-    WebElement homePageLogo;
+    public WebElement homePageLogo;
 
     //Registration >>> Name Textbox
     @FindBy(xpath = "(//input[@type='text'])[1]")
     public WebElement labelRegistrationInput;
 
     //Registration >>> Email Textbox
-    @FindBy(xpath="//input[@type='email']")
+    @FindBy(xpath = "//input[@type='email']")
     public WebElement labelRegistrationMail;
 
     //Registration >>> password Textbox
-    @FindBy(xpath="//input[@type='password']")
+    @FindBy(xpath = "//input[@type='password']")
     public WebElement labelRegistrationPass;
 
     //Registration >>> button
@@ -36,7 +38,7 @@ public class TawUserHomePage {
     public WebElement registrationButton;
 
     //Registration >>> Onay
-    @FindBy(xpath ="//*[contains(text(), 'Please check your email to verify your registration. Check your spam folder too.')]")
+    @FindBy(xpath = "//*[contains(text(), 'Please check your email to verify your registration. Check your spam folder too.')]")
     public WebElement registrationOnay;
 
 
@@ -71,4 +73,6 @@ public class TawUserHomePage {
     //HomePage >>> Slider kısmı ilk tanıtım read more buttonu
     @FindBy(xpath = "(//div[@class='text-animated'])[9]/ul/li")
     public WebElement sliderIlkTanitimReadMoreButton;
+
+}
 

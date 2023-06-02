@@ -7,7 +7,9 @@ import utilities.Driver;
 
 public class TawAdminPage {
 
-    public TawAdminPage(){PageFactory.initElements(Driver.getDriver(), this);}
+    public TawAdminPage(){
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
      //AdminPage >>> SideBar >>> AccordionButton
     @FindBy(id = "accordionSidebar")
@@ -15,22 +17,26 @@ public class TawAdminPage {
 
 
     //AdminPage >>> Login  >>> AdminEmailBox
-    @FindBy(id = "email")
+    @FindBy(xpath = "//*[@*='email']")
     public WebElement adminEmailBox;
 
     //AdminPage >>> Login  >>> AdminPasswordBox
-    @FindBy(id = "password")
+    @FindBy(xpath = "//*[@*='password']")
     public WebElement adminPassBox;
 
     //AdminPage >>> Login  >>> AdminLoginSubmitButton
     @FindBy(xpath = "//*[@*='submit']")
     public WebElement adminLoginButton;
 
-    //AdminPage >>> Dashboard  >>> ScrollToTopButton
-    @FindBy(className = "scroll-to-top rounded")
-    public WebElement scrollToTopButton;
+    //AdminPage >>> DashBoard >>> VisitWebsiteButton
+    @FindBy(xpath = "//*[@id=\"content\"]/nav/ul/li[1]/a")
+    public WebElement visitWebsiteButton;
 
+    //AdminPage >>> Dashboard >>> SideBarToggleButton
+    @FindBy(id = "sidebarToggle")
+    public WebElement sideBarToggleButton;
 
-
-
+    //AdminPage >>> Dashboard >>> SideBarToggledLocate
+    @FindBy(xpath = "//*[@*='sidebar-toggled']")
+    public WebElement sideBarToggledLocate;
 }
