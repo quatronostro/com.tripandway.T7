@@ -23,6 +23,7 @@ public class Driver {
     }
 
     public static void closeDriver(){
+
         if(driver != null){
             driver.close();
             driver = null;
@@ -32,7 +33,8 @@ public class Driver {
 
 
     public static void quitDriver(){
-        if(driver != null){
+
+        if (driver != null){
             driver.quit();
             driver = null;
         }
