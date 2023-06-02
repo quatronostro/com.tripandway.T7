@@ -2,12 +2,20 @@
 ### 
 ***
 ### Genel Kurallarımız
-Locate alinan elementin nerenin elementi oldugunu aciklama satiri ile aciklanmali
-   || orn:  Homepage>> LoginLink>> Email Text Box ||
-Locate'in üzerine yazıyoruz
+
+* Locate'i alınan elementin, ait olduğu `@FindBy` notasyonunun üzerine yorum olarak nereye ait olduğunu yazıyoruz
+
+&nbsp; &nbsp;   `orn:  //HomePage >>> LogoImage`
+
+* Site ve Admin URL'leri aşağıdaki şekilde configuration.properties dosyasında yer alır
+
+&nbsp; &nbsp;   `tawUrl = "qa.tripandway.com`
+
+&nbsp; &nbsp;   `tawAdminUrl = "qa.tripandway.com/admin`
 
 <br/>
 
+***
 ### Git
 [Git Collabration dökümantasyon](https://www.notion.so/baramuk/Github-Documentation-127efbcd39404e008bca15447b5fcc40?pvs=4)
 
@@ -18,8 +26,10 @@ Locate'in üzerine yazıyoruz
 
 <br/>
 
-### Isimlendirmelerde dikaat edilecekler
 ***
+
+### Isimlendirmelerde dikaat edilecekler
+
 | Element Türü           | Variable name     |
 |------------------------|-------------------|
 | Button                 | signInButton      |    
