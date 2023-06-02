@@ -9,7 +9,7 @@ public class TawUserHomePage {
 
     public TawUserHomePage(){PageFactory.initElements(Driver.getDriver(), this);}
 
-    //HomePage >>> Logo
+    //HomePage >>> LogoImage
     @FindBy(xpath = "//*[@*='logo']")
     WebElement homePageLogo;
 
