@@ -38,7 +38,7 @@
 | Sadece text            | labelX            |
 | Drop down              | dropDownX         |
 | Radio Button           | radioButtonX      |
-| Check box              | checkBoxX         |
+| Email box              | xBox         |
 | Tablo Sütünu           | columnX           |
 | Tablo Satiri           | rowX              |
 | Kisi Resimleri         | imageProfileX     |
