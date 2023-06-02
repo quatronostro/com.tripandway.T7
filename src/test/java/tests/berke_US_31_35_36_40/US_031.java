@@ -6,17 +6,17 @@ import utilities.TestBaseReport;
 public class US_031 {
 
     @Test
-    public void US_031_TC_01(){
+    public void TC_01(){
 
     }
 
     @Test
-    public void US_031_TC_02(){
+    public void TC_02(){
 
     }
 
     @Test
-    public void US_031_TC_03(){
+    public void C_03(){
 
     }
 }
