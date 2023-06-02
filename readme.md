@@ -32,7 +32,7 @@
 
 | Element Türü           | Variable name     |
 |------------------------|-------------------|
-| Button                 | signInButton      |    
+| Button                 | xButton      |    
 | Logo                   | logoX             |
 | icon                   | iconX             |
 | Sadece text            | labelX            |
