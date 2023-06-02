@@ -26,6 +26,8 @@ public class US_040 {
         tawAdminPage.adminLoginButton.click();
 
         //2. Sol tarafta bulunan panelin alt kısmında ok işaretli butona tıklanır
+
+        TawAdminPage tawAdminPage = new TawAdminPage();
         tawAdminPage.accordionButton.click();
 
         //3. Panelin kapalı hale geldiği doğrulanır

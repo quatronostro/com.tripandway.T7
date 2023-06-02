@@ -13,6 +13,7 @@ public class TawAdminPage {
     @FindBy(id = "accordionSidebar")
     public WebElement accordionButton;
 
+
     //AdminPage >>> Login  >>> AdminEmailBox
     @FindBy(id = "email")
     public WebElement adminEmailBox;
@@ -28,6 +29,7 @@ public class TawAdminPage {
     //AdminPage >>> Dashboard  >>> ScrollToTopButton
     @FindBy(className = "scroll-to-top rounded")
     public WebElement scrollToTopButton;
+
 
 
 
