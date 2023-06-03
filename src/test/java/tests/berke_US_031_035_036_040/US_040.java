@@ -1,11 +1,10 @@
-package tests.berke_US_31_35_36_40;
+package tests.berke_US_031_035_036_040;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TawAdminPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.JSUtilities;
 import utilities.ReusableMethods;
 
 
@@ -26,12 +25,13 @@ public class US_040 {
         tawAdminPage.adminLoginButton.click();
 
         //2. Sol tarafta bulunan panelin alt kısmında ok işaretli butona tıklanır
-
-        TawAdminPage tawAdminPage = new TawAdminPage();
         tawAdminPage.accordionButton.click();
 
         //3. Panelin kapalı hale geldiği doğrulanır
+        ReusableMethods.waitForVisibility(tawAdminPage.sideBarToggledLocate, 1);
+        Assert.assertTrue(tawAdminPage.sideBarToggledLocate.isDisplayed());
 
+        Driver.closeDriver();
 
         Driver.closeDriver();
     }

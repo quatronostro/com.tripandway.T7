@@ -1,7 +1,6 @@
-package tests.berke_US_31_35_36_40;
+package tests.berke_US_031_035_036_040;
 
 import org.testng.annotations.Test;
-import utilities.TestBaseReport;
 
 public class US_031 {
 

@@ -30,6 +30,17 @@ public class TawAdminPage {
     @FindBy(className = "scroll-to-top rounded")
     public WebElement scrollToTopButton;
 
+    //AdminPage >>> DashBoard >>> VisitWebsiteButton
+    @FindBy(xpath = "//*[@id=\"content\"]/nav/ul/li[1]/a")
+    public WebElement visitWebsiteButton;
+
+    //AdminPage >>> Dashboard >>> SideBarToggleButton
+    @FindBy(id = "sidebarToggle")
+    public WebElement sideBarToggleButton;
+
+    //AdminPage >>> Dashboard >>> SideBarToggledLocate
+    @FindBy(xpath = "//*[@*='sidebar-toggled']")
+    public WebElement sideBarToggledLocate;
 
 
 
