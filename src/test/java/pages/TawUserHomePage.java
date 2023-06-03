@@ -19,7 +19,7 @@ public class TawUserHomePage {
 
     //HomePage >>> LogoImage
     @FindBy(xpath = "//*[@*='logo']")
-    WebElement homePageLogo;
+    public WebElement homePageLogo;
 
     //HomePage >>> Registration >>> NameTextbox
     @FindBy(xpath = "(//input[@type='text'])[1]")
@@ -29,7 +29,8 @@ public class TawUserHomePage {
     @FindBy(xpath = "//input[@type='email']")
     public WebElement labelRegistrationMail;
 
-    //HomePage >>> Registration >>> passwordTextbox
+
+    //Registration >>> password Textbox
     @FindBy(xpath = "//input[@type='password']")
     public WebElement labelRegistrationPass;
 
@@ -75,3 +76,4 @@ public class TawUserHomePage {
     public WebElement sliderIlkTanitimReadMoreButton;
 
 }
+
