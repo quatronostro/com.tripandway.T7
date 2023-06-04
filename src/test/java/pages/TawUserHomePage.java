@@ -19,28 +19,28 @@ public class TawUserHomePage {
 
     //HomePage >>> LogoImage
     @FindBy(xpath = "//*[@*='logo']")
-    WebElement homePageLogo;
+    public WebElement homePageLogo;
 
-    //Registration >>> Name Textbox
+    //HomePage >>> Registration >>> NameTextbox
     @FindBy(xpath = "(//input[@type='text'])[1]")
     public WebElement labelRegistrationInput;
 
-    //Registration >>> Email Textbox
+    //HomePage >>> Registration >>> EmailTextbox
     @FindBy(xpath = "//input[@type='email']")
     public WebElement labelRegistrationMail;
+
 
     //Registration >>> password Textbox
     @FindBy(xpath = "//input[@type='password']")
     public WebElement labelRegistrationPass;
 
-    //Registration >>> button
+    //HomePage >>> Registration >>> MakeRegistrationButton
     @FindBy(xpath = "//button[@type='submit']")
-    public WebElement registrationButton;
+    public WebElement MakeRegistrationButton;
 
-    //Registration >>> Onay
+    //HomePage >>> Registration >>> Onay
     @FindBy(xpath = "//*[contains(text(), 'Please check your email to verify your registration. Check your spam folder too.')]")
     public WebElement registrationOnay;
-
 
     //HomePage >>> Slider kısmı
     @FindBy(xpath = "//div[@class='slider']")
@@ -564,3 +564,4 @@ public class TawUserHomePage {
 
 
 }
+
