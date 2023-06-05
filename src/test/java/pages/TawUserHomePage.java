@@ -562,6 +562,243 @@ public class TawUserHomePage {
     @FindBy(xpath = "(//a[text()='See All Destinations'])")
     public WebElement buttonHomePageBodySeeAllDestinationsButton;
 
+    //HomePage >>> Team Members Kısminin tamamı
+    @FindBy(xpath = "//div[@class='team-area bg-area pt_80 pb_80']")
+    public WebElement homePageBodyTeamMembersAlani;
+
+    //HomePage >>> Team Members Kısminin baslik texti
+    @FindBy(xpath = "//h2[text()='Team Members']")
+    public WebElement labelHomePageBodyTeamMembersBaslikTexti;
+
+    //HomePage >>> Team Members Kısminin aciklama texti
+    @FindBy(xpath = "(//div[@class='main-headline'])[4]/p")
+    public WebElement labelHomePageBodyTeamMembersAciklamaTexti;
+
+    //HomePage >>> Team Members Kısminin birinci üyesi
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[5]")
+    public WebElement homePageBodyTeamMembersBirinciUye;
+
+    //HomePage >>> Team Members Kısminin birinci üyesi isim text
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[5]/div/div/a")
+    public WebElement labelHomePageBodyTeamMembersBirinciUyeIsimTexti;
+
+    //HomePage >>> Team Members Kısminin birinci üyesi görev text
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[5]/div/div/p")
+    public WebElement labelHomePageBodyTeamMembersBirinciUyeGorevTexti;
+
+    //HomePage >>> Team Members Kısminin birinci üyesi isim ve görev kusutusu
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[5]/div/div[2]")
+    public WebElement labelHomePageBodyTeamMembersBirinciUyeIsimVeGorevKutusu;
+
+    //HomePage >>> Team Members Kısminin birinci üyesi Facebook icon
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[5]/div/div/div[2]/ul/li[1]")
+    public WebElement iconHomePageBodyTeamMembersBirinciUyeFacebookIcon;
+
+    //HomePage >>> Team Members Kısminin birinci üyesi twitter icon
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[5]/div/div/div[2]/ul/li[2]")
+    public WebElement iconHomePageBodyTeamMembersBirinciUyeTwitterIcon;
+
+    //HomePage >>> Team Members Kısminin birinci üyesi LinkedIn icon
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[5]/div/div/div[2]/ul/li[3]")
+    public WebElement iconHomePageBodyTeamMembersBirinciUyeLinkedInIcon;
+
+    //HomePage >>> Team Members Kısminin birinci üyesi tüm icon'lar
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[5]/div/div/div[2]/ul/li")
+    public List<WebElement> iconHomePageBodyTeamMembersBirinciUyeTumIconlar;
+
+    //HomePage >>> Team Members Kısminin Ikinci üyesi
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[6]")
+    public WebElement homePageBodyTeamMembersIkinciUye;
+
+    //HomePage >>> Team Members Kısminin Ikinci üyesi isim text
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[6]/div/div/a")
+    public WebElement labelHomePageBodyTeamMembersIkinciUyeIsimTexti;
+
+    //HomePage >>> Team Members Kısminin Ikinci üyesi görev text
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[6]/div/div/p")
+    public WebElement labelHomePageBodyTeamMembersIkinciUyeGorevTexti;
+
+    //HomePage >>> Team Members Kısminin Ikinci üyesi isim ve görev kusutusu
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[6]/div/div[2]")
+    public WebElement labelHomePageBodyTeamMembersIkinciUyeIsimVeGorevKutusu;
+
+    //HomePage >>> Team Members Kısminin Ikinci üyesi Facebook icon
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[6]/div/div/div[2]/ul/li[1]")
+    public WebElement iconHomePageBodyTeamMembersIkinciUyeFacebookIcon;
+
+    //HomePage >>> Team Members Kısminin Ikinci üyesi twitter icon
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[6]/div/div/div[2]/ul/li[2]")
+    public WebElement iconHomePageBodyTeamMembersIkinciUyeTwitterIcon;
+
+    //HomePage >>> Team Members Kısminin Ikinci üyesi LinkedIn icon
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[6]/div/div/div[2]/ul/li[3]")
+    public WebElement iconHomePageBodyTeamMembersIkinciUyeLinkedInIcon;
+
+    //HomePage >>> Team Members Kısminin Ikinci üyesi tüm icon'lar
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[6]/div/div/div[2]/ul/li")
+    public List<WebElement> iconHomePageBodyTeamMembersIkinciUyeTumIconlar;
+
+    //HomePage >>> Team Members Kısminin Ucuncu üyesi
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[7]")
+    public WebElement homePageBodyTeamMembersUcuncuUye;
+
+    //HomePage >>> Team Members Kısminin Ucuncu üyesi isim text
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[7]/div/div/a")
+    public WebElement labelHomePageBodyTeamMembersUcuncuUyeIsimTexti;
+
+    //HomePage >>> Team Members Kısminin Ucuncu üyesi görev text
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[7]/div/div/p")
+    public WebElement labelHomePageBodyTeamMembersUcuncuUyeGorevTexti;
+
+    //HomePage >>> Team Members Kısminin Ucuncu üyesi isim ve görev kusutusu
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[7]/div/div[2]")
+    public WebElement labelHomePageBodyTeamMembersUcuncuUyeIsimVeGorevKutusu;
+
+    //HomePage >>> Team Members Kısminin Ucuncu üyesi Facebook icon
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[7]/div/div/div[2]/ul/li[1]")
+    public WebElement iconHomePageBodyTeamMembersUcuncuUyeFacebookIcon;
+
+    //HomePage >>> Team Members Kısminin Ucuncu üyesi twitter icon
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[7]/div/div/div[2]/ul/li[2]")
+    public WebElement iconHomePageBodyTeamMembersUcuncuUyeTwitterIcon;
+
+    //HomePage >>> Team Members Kısminin Ucuncu üyesi LinkedIn icon
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[7]/div/div/div[2]/ul/li[3]")
+    public WebElement iconHomePageBodyTeamMembersUcuncuUyeLinkedInIcon;
+
+    //HomePage >>> Team Members Kısminin Ucuncu üyesi tüm icon'lar
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[7]/div/div/div[2]/ul/li")
+    public List<WebElement> iconHomePageBodyTeamMembersUcuncuUyeTumIconlar;
+
+    //HomePage >>> Team Members Kısminin Dorduncu üyesi
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[8]")
+    public WebElement homePageBodyTeamMembersDorduncuUye;
+
+    //HomePage >>> Team Members Kısminin Dorduncu üyesi isim text
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[8]/div/div/a")
+    public WebElement labelHomePageBodyTeamMembersDorduncuUyeIsimTexti;
+
+    //HomePage >>> Team Members Kısminin Dorduncu üyesi görev text
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[8]/div/div/p")
+    public WebElement labelHomePageBodyTeamMembersDorduncuUyeGorevTexti;
+
+    //HomePage >>> Team Members Kısminin Dorduncu üyesi isim ve görev kusutusu
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[8]/div/div[2]")
+    public WebElement labelHomePageBodyTeamMembersDorduncuUyeIsimVeGorevKutusu;
+
+    //HomePage >>> Team Members Kısminin Dorduncu üyesi Facebook icon
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[8]/div/div/div[2]/ul/li[1]")
+    public WebElement iconHomePageBodyTeamMembersDorduncuUyeFacebookIcon;
+
+    //HomePage >>> Team Members Kısminin Dorduncu üyesi twitter icon
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[8]/div/div/div[2]/ul/li[2]")
+    public WebElement iconHomePageBodyTeamMembersDorduncuUyeTwitterIcon;
+
+    //HomePage >>> Team Members Kısminin Dorduncu üyesi LinkedIn icon
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[8]/div/div/div[2]/ul/li[3]")
+    public WebElement iconHomePageBodyTeamMembersDorduncuUyeLinkedInIcon;
+
+    //HomePage >>> Team Members Kısminin Dorduncu üyesi tüm icon'lar
+    @FindBy(xpath = "(//div[@class='owl-stage'])[3]/div[8]/div/div/div[2]/ul/li")
+    public List<WebElement> iconHomePageBodyTeamMembersDorduncuUyeTumIconlar;
+
+    //HomePage >>> Testimonial kısmının tamamı
+    @FindBy(xpath = "//div[@class='testimonial-area pt_80 pb_80']")
+    public WebElement homePageBodyTestimonialAlani;
+
+    //HomePage >>> Testimonial kısmının baslik texti
+    @FindBy(xpath = "//h2[text()='Testimonial']")
+    public WebElement labelHomePageBodyTestimonialBaslikTexti;
+
+    //HomePage >>> Testimonial kısmının aciklama texti
+    @FindBy(xpath = "(//div[@class='main-headline white'])[1]/p")
+    public WebElement labelHomePageBodyTestimonialAciklamaTexti;
+
+    //HomePage >>> Testimonial kısmının bütün radio buttonlari
+    @FindBy(xpath = "(//div[@class='owl-dots'])[3]/div")
+    public List<WebElement> radioButtonHomePageBodyTestimonialButunRadioButtonlar;
+
+    //HomePage >>> Testimonial kısmının birinci radio buttonu
+    @FindBy(xpath = "(//div[@class='owl-dots'])[3]/div[1]")
+    public WebElement radiButtonHomePageBoydTestimonialBirinciRadioButton;
+
+    //HomePage >>> Testimonial kısmının Ikinci radio buttonu
+    @FindBy(xpath = "(//div[@class='owl-dots'])[3]/div[2]")
+    public WebElement radiButtonHomePageBoydTestimonialIkinciRadioButton;
+
+    //HomePage >>> Testimonial kısmının Ucuncu radio buttonu
+    @FindBy(xpath = "(//div[@class='owl-dots'])[3]/div[3]")
+    public WebElement radiButtonHomePageBoydTestimonialUcuncuRadioButton;
+
+    //HomePage >>> Testimonial kısmının Dorduncu radio buttonu
+    @FindBy(xpath = "(//div[@class='owl-dots'])[3]/div[4]")
+    public WebElement radiButtonHomePageBoydTestimonialDorduncuRadioButton;
+
+    //HomePage >>> Testimonial kısmının birinci üyesinin fotografı
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[1]/div/div[1]")
+    public WebElement imageProfileHomePageBodyTestimonialBirinciUyeImage;
+
+    //HomePage >>> Testimonial kısmının birinci üyesinin ismi
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[1]/div/div[2]/h2")
+    public WebElement  labelHomePageBodyTestimonialBirinciUyeIsimTexti;
+
+    //HomePage >>> Testimonial kısmının birinci üyesinin görev texti
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[1]/div/div[2]/h3")
+    public WebElement  labelHomePageBodyTestimonialBirinciUyeGorevTexti;
+
+    //HomePage >>> Testimonial kısmının birinci üye aciklama texti
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[1]/div/div[2]/div")
+    public WebElement  labelHomePageBodyTestimonialBirinciUyeAciklamaTexti;
+
+    //HomePage >>> Testimonial kısmının Ikinci üyesinin fotografı
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[2]/div/div[1]")
+    public WebElement imageProfileHomePageBodyTestimonialIkinciUyeImage;
+
+    //HomePage >>> Testimonial kısmının Ikinci üyesinin ismi
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[2]/div/div[2]/h2")
+    public WebElement  labelHomePageBodyTestimonialIkinciUyeIsimTexti;
+
+    //HomePage >>> Testimonial kısmının Ikinci üyesinin görev texti
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[2]/div/div[2]/h3")
+    public WebElement  labelHomePageBodyTestimonialIkinciUyeGorevTexti;
+
+    //HomePage >>> Testimonial kısmının Ikinci üye aciklama texti
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[2]/div/div[2]/div")
+    public WebElement  labelHomePageBodyTestimonialIkinciUyeAciklamaTexti;
+
+    //HomePage >>> Testimonial kısmının Ucuncu üyesinin fotografı
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[3]/div/div[1]")
+    public WebElement imageProfileHomePageBodyTestimonialUcuncuUyeImage;
+
+    //HomePage >>> Testimonial kısmının Ucuncu üyesinin ismi
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[3]/div/div[2]/h2")
+    public WebElement  labelHomePageBodyTestimonialUcuncuUyeIsimTexti;
+
+    //HomePage >>> Testimonial kısmının Ucuncu üyesinin görev texti
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[3]/div/div[2]/h3")
+    public WebElement  labelHomePageBodyTestimonialUcuncuUyeGorevTexti;
+
+    //HomePage >>> Testimonial kısmının Ucuncu üye aciklama texti
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[3]/div/div[2]/div")
+    public WebElement  labelHomePageBodyTestimonialUcuncuUyeAciklamaTexti;
+
+    //HomePage >>> Testimonial kısmının Dorduncu üyesinin fotografı
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[4]/div/div[1]")
+    public WebElement imageProfileHomePageBodyTestimonialDorduncuUyeImage;
+
+    //HomePage >>> Testimonial kısmının Dorduncu üyesinin ismi
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[4]/div/div[2]/h2")
+    public WebElement  labelHomePageBodyTestimonialDorduncuUyeIsimTexti;
+
+    //HomePage >>> Testimonial kısmının Dorduncu üyesinin görev texti
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[4]/div/div[2]/h3")
+    public WebElement  labelHomePageBodyTestimonialDorduncuUyeGorevTexti;
+
+    //HomePage >>> Testimonial kısmının Dorduncu üye aciklama texti
+    @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[4]/div/div[2]/div")
+    public WebElement  labelHomePageBodyTestimonialDorduncuUyeAciklamaTexti;
+
+
 
 }
 
