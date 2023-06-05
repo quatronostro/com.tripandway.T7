@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US_001 {
+public class C01_US_001 {
 
     // US_001 >>> Bir ziyaretçi olarak siteyi kullanabilmek icin web sitesine erişebildiğimi doğrulayabilmeliyim
 
