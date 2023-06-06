@@ -76,5 +76,12 @@ public class TawAdminPage {
     @FindBy(xpath = "//div[@class='toast-message']")
     public WebElement newPackagesOnay;
 
+    //AdminPage >>> SolPanelList >>> Packages >>> Listede daha önceki test'ten oluşturulan package locate!
+    @FindBy(xpath = "//*[text()='New Test Packages']")
+    public WebElement packageLocate;
+
+    //AdminPage >>> SolPanelList >>> Packages >>> EditButton
+    @FindBy(xpath = "//*[@class='btn btn-warning btn-sm']")
+    public WebElement packageEditButton;
 
 }
