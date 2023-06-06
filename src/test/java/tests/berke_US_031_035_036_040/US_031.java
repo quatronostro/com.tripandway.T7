@@ -2,6 +2,7 @@ package tests.berke_US_031_035_036_040;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TawAdminPage;
 import utilities.ConfigReader;
@@ -32,12 +33,53 @@ public class US_031 {
                 .sendKeys(Keys.TAB)
                 .sendKeys(ConfigReader.getProperty("addSlugForPackage")).perform(); //Slugbox
 
-        tawAdminPage.packagesChooseFileButton.click();
-        String dosyaYolu = "src/test/java/utilities/filesForUpload/board-361516_640.jpg";
+        String herkesteFarkliOlan = System.getProperty("user.dir");
+        String herkesteAyniOlan = "\\src\\test\\java\\utilities\\filesForUpload\\board-361516_640.jpg";
+        String dosyaYolu = herkesteFarkliOlan + herkesteAyniOlan;
 
-        tawAdminPage.packagesChooseFileButton.sendKeys();
+        tawAdminPage.packagesChooseFileButton.sendKeys(dosyaYolu);
+
+        actions.click(tawAdminPage.packagesDescriptionTextBox)
+                .sendKeys(ConfigReader.getProperty("addNewPackageDescriptionTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("addNewPackageShortDescriptionTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("addNewPackageLocationTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("addNewPackageStartDate"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("addNewPackageEndDate"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("addNewPackageLastBookingDate"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("addNewPackageMapTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("addNewPackageItineraryTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("addNewPackagePrice"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("addNewPackagePolicyTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("addNewPackageTermsTextBox"))
+                .sendKeys(Keys.TAB) //is Featured?
+                .sendKeys(Keys.ARROW_DOWN) //yes
+                .sendKeys(Keys.TAB) // Destination
+                .sendKeys(Keys.ENTER) //search
+                .sendKeys(Keys.ARROW_DOWN) //seçim
+                .sendKeys(Keys.ENTER)
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("addNewPackageSEOTitleTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("addNewPackageSEOMetaDescriptionTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.ENTER).perform();
+
 
         //5. Çıkan alerts ile ya da açılan tablo yardımı ile ilgili bilgileri görüntüleyebildiğini doğrulanır
+        Assert.assertTrue(tawAdminPage.newPackagesOnay.isDisplayed());
+
+        Driver.closeDriver();
+
     }
 
     @Test
