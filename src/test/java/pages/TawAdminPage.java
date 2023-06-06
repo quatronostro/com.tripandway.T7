@@ -65,6 +65,16 @@ public class TawAdminPage {
     public WebElement packagesNameBox;
 
     //AdminPage >>> SolPanelList >>> Packages >>> AddNewPackagesPage >>> ChooseFileButton
-    @FindBy(xpath = "//*[@*='p_photo']")
+    @FindBy(xpath = "//input[@*='p_photo']")
     public  WebElement packagesChooseFileButton;
+
+    //AdminPage >>> SolPanelList >>> Packages >>> AddNewPackagesPage >>> DescriptionTextBox
+    @FindBy(xpath = "//*[@id=\"content\"]/div/form/div/div[2]/div[4]/div/div[3]/div[2]")
+    public  WebElement packagesDescriptionTextBox;
+
+    //AdminPage >>> SolPanelList >>> Packages >>> AddNewPackagesPage >>> Onay
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement newPackagesOnay;
+
+
 }
