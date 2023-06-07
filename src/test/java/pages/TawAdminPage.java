@@ -106,7 +106,7 @@ public class TawAdminPage {
     @FindBy(className = "sorting_asc")
     public WebElement allSubscribersSLButton;
 
-    //AdminPage >>> SolPanelList >>> Subscribers >>> AllSubscribers >>> ListİlkHücre
+    //AdminPage >>> SolPanelList >>> Subscribers >>> AllSubscribers >>> TableİlkHücre
     @FindBy(xpath = "//*[@id=\"dataTable\"]/tbody/tr[1]/td[1]")
     public WebElement lastSubscriberNumber;
 
@@ -121,4 +121,34 @@ public class TawAdminPage {
     //AdminPage >>> SolPanelList >>> Subscribers >>> Send Email to Subscribers
     @FindBy(xpath = "//*[@id=\"collapseSubscriber\"]/div/a[2]")
     public WebElement sendEmailToSubscribersButton;
+
+    //AdminPage >>> SolPanelList >>> OrderButton
+    @FindBy(xpath = "//*[@id=\"accordionSidebar\"]/li[11]/a")
+    public WebElement orderButton;
+
+    //AdminPage >>> SolPanelList >>> OrderPage >>> SLButton
+    @FindBy(className = "sorting_asc")
+    public WebElement orderPageSLButton;
+
+    //AdminPage >>> SolPanelList >>> OrderPage >>> TableİlkHücre
+    @FindBy(xpath = "//*[@id=\"dataTable\"]/tbody/tr[1]/td[1]")
+    public WebElement lastOrderNumber;
+
+    //AdminPage >>> adminProfileDropDown
+    @FindBy(id = "userDropdown")
+    public WebElement dropDownAdminProfile;
+
+    //AdminPage >>> adminProfileDropDownMenu
+    @FindBy(xpath = "//*[@id=\"content\"]/nav/ul/li[2]/div")
+    public WebElement dropDownMenuAdminProfile;
+
+    //AdminPage >>> adminProfileDropDownMenu >>> changePasswordButton
+    @FindBy(xpath = "//*[@id=\"content\"]/nav/ul/li[2]/div/a[1]")
+    public WebElement changePasswordButton;
+
+    //AdminPage >>> adminProfileDropDownMenu >>> changePhotoButton
+    @FindBy(xpath = "//*[@id=\"content\"]/nav/ul/li[2]/div/a[2]")
+    public WebElement changePhotoButton;
+
+
 }

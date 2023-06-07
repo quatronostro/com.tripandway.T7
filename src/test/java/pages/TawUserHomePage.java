@@ -1146,5 +1146,17 @@ public class TawUserHomePage {
     //HomePage >>> HomePage body accept cookie buttonu
     @FindBy(xpath = "//button[@class='wpcc-btn']")
     public WebElement buttonHomePageBodyAcceptCookieButton;
+
+    //HomePage >>> header >>>> ContactButton
+    @FindBy(xpath = "//*[@id=\"menu\"]/li[8]/a")
+    public WebElement contactButton;
+
+    //HomePage >>> header >>>> ContactPage >>> ContactFormName
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[1]/div/form/div/div[1]/input")
+    public WebElement contactFromNameBox;
+
+    //Homepage >>> AlertOnay
+    @FindBy(xpath = "//div[@class='toast toast-success']")
+    public WebElement alertOnay;
 }
 
