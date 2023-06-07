@@ -1,10 +1,16 @@
 package pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class TawAdminPage {
 
@@ -67,4 +73,93 @@ public class TawAdminPage {
     //AdminPage >>> SolPanelList >>> Packages >>> AddNewPackagesPage >>> ChooseFileButton
     @FindBy(xpath = "//*[@*='p_photo']")
     public  WebElement packagesChooseFileButton;
+
+    //AdminPage >>> BlogSection
+    @FindBy(xpath = "//span[text()='Blog Section']")
+    public WebElement buttonBlogSectionButton;
+
+    //AdminPage >>> BlogSection >>> categories
+    @FindBy(xpath = "//a[text()='Categories']")
+    public WebElement buttonBlogSectionCategoriesButton;
+
+    //AdminPage >>> BlogSection >>> categories >>> add new Button
+    @FindBy(xpath = "//div[@class='float-right d-inline']")
+    public WebElement getButtonBlogSectionCatagoriesAddNewButton;
+
+    //AdminPage >>> BlogSection >>> categories >>> add category >>> category name
+    @FindBy(xpath = "//input[@name='category_name']")
+    public WebElement blogSectionCategoryCategoryName;
+
+    //AdminPage >>> BlogSection >>> categories >>> search textbox
+    @FindBy(xpath = "(//input[@type='search'])")
+    public WebElement blogSectionCategorySearchTextBox;
+
+    //AdminPage >>> BlogSection >>> categories >>> category title
+    @FindBy(xpath = "//tbody/tr/td[2]")
+    public WebElement blogSectionCategoryCategoryTitle;
+
+    //AdminPage >>> BlogSection >>> categories >>> edit button
+    @FindBy(xpath = "//i[@class='fas fa-edit']")
+    public WebElement blogSectionCategoryEditButton;
+
+    //AdminPage >>> BlogSection >>> categories >>> edi >>> update button
+    @FindBy(xpath = "//button[text()='Update']")
+    public WebElement blogSectionCategoryEditUpdateButton;
+
+    //AdminPage >>> BlogSection >>> categories >>> update alert
+    @FindBy(xpath = "//div[text()='Category is updated successfully!']")
+    public WebElement blogSectionCategoryUpdateAlert;
+
+    //AdminPage >>> BlogSection >>> categories >>> delete button
+    @FindBy(xpath = "//i[@class='fas fa-trash-alt']")
+    public  WebElement buttonblogSectionCategoryDeleteButton;
+
+    //AdminPage >>> BlogSection >>> categories >>> delete alert
+    @FindBy(xpath = "//div[text()='Category is deleted successfully!']")
+    public WebElement blogSectionCategoryDeleteAlert;
+
+    //AdminPage >>> Order >>> order button
+    @FindBy(xpath = "//span[text()='Order']")
+    public WebElement buttonOrderOrderButtonu;
+
+    //AdminPage >>> Order >>> Order page
+    public WebElement orderPageRandomDetailButtonXpath(WebDriver driver){
+
+        Random rnd = new Random();
+        int randomSayi= rnd.nextInt(11);
+        WebElement sonelement;
+        while (true){
+            if (randomSayi>0){
+                WebElement element = driver.findElement(By.xpath("//tbody/tr["+randomSayi+"]/td[11]/a[1]"));
+                sonelement=element;
+                break;
+            }
+        }
+
+        return sonelement;
+    }
+
+    //AdminPage >>> Order >>> order page >> order detail title
+    @FindBy(xpath = "//h1[text()='Order Detail']")
+    public WebElement labelOrderOrderDetailTitleText;
+
+    //AdminPage >>> Order >>> order page >> order detail >>bütün Fatura sayfası
+    @FindBy(xpath = "//div[@class='row']")
+    public WebElement orderOrderDetailButunFatura;
+
+    //AdminPage >>> Order >>> order page >> order detail >>bütün Fatura baslik textleri
+    public List<String> orderPageAllFaturaTitleText(WebDriver driver){
+
+        List<WebElement> butunTitlelar = driver.findElements(By.xpath("//tbody//tr"));
+
+        List<String> list = new ArrayList<>();
+
+        int sayi = 1;
+
+        for (int i = 0; i < butunTitlelar.size(); i++) {
+            list.add("//tbody//tr["+sayi+"]/td/b");
+            sayi++;
+        }
+        return list;
+    }
 }

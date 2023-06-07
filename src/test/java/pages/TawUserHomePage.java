@@ -1032,5 +1032,50 @@ public class TawUserHomePage {
     //HomePage >>> HomePage body accept cookie buttonu
     @FindBy(xpath = "//button[@class='wpcc-btn']")
     public WebElement buttonHomePageBodyAcceptCookieButton;
+
+    //HomePage >>> Header login buttonu
+    @FindBy(xpath = "(//div[@class='top-header-right'])/a[2]")
+    public WebElement buttonHeaderLoginButtonu;
+
+    //HomePage >>> Login Page email address Text box
+    @FindBy(xpath = "//input[@name='traveller_email']")
+    public WebElement loginPageEmailAdressTextBox;
+
+    //HomePage >>> Login Page password Text Box
+    @FindBy(xpath = "//input[@name='traveller_password']")
+    public WebElement loginPagePasswordTextBox;
+
+    //HomePage >>> Login Page login buttonu
+    @FindBy(xpath = "//button[text()='Login']")
+    public WebElement buttonLoginPageLoginButtonu;
+
+    //UserDashboard >>> Dashboard buttonu
+    @FindBy(xpath = "//div[@class='top-header-right']")
+    public WebElement buttonUserDashboardDashboardButtonu;
+
+    //Header >>> header kısmı tripandway logosu
+    @FindBy(xpath = "//img[@alt='Logo']")
+    public WebElement logoUserDashboardTripAndWayLogosu;
+
+    //Footer >>> Adress bölümünün tamamı
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]")
+    public WebElement footerAddressBolumunTamami;
+
+    //Footer >>> Adress bölümünün baslik texti
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]/div/h3")
+    public WebElement labelFooterAddressBaslikTexti;
+
+    //Footer >>> Adress bölümünün birinci satır texti
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]/div/div[1]/div[2]")
+    public WebElement labelFooterAddressBirinciSatirTexti;
+
+    //Footer >>> Adress bölümünün Ikinci satır texti
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]/div/div[2]/div[2]")
+    public WebElement labelFooterAddressIkinciSatirTexti;
+
+    //Footer >>> Adress bölümünün Ucuncu satır texti
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]/div/div[3]/div[2]")
+    public WebElement labelFooterAddressUcuncuSatirTexti;
+
 }
 
