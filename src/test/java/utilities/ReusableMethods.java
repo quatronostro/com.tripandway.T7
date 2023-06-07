@@ -357,4 +357,10 @@ public class ReusableMethods {
     public static void waitAndClickLocationText(WebElement element, String value) {
         Driver.getDriver().findElement(By.xpath("//*[text()='" + value + "']")).click();
     }
+
+    public static void uploadFile(String gonderilecekDosyaContentRoot){
+        String herkesteFarkliOlan = System.getProperty("user.dir");
+        String herkesteAyniOlan = gonderilecekDosyaContentRoot;
+        String dosyaYolu= herkesteFarkliOlan+herkesteAyniOlan;
+    }
 }

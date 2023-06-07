@@ -1,5 +1,7 @@
 package tests.aziz_US_001_003_004_012;
 
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,6 +14,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.security.Key;
 import java.time.Duration;
 
 public class C02_US_003_HomePageSlider {
@@ -26,9 +29,22 @@ public class C02_US_003_HomePageSlider {
         Driver.getDriver().get(ConfigReader.getProperty("tawUrl"));
 
         // 3.Slider kısmının görünür olduğunu doğrula
-
         TawUserHomePage tawUserHomePage = new TawUserHomePage();
+        Assert.assertTrue(tawUserHomePage.slider.isDisplayed());
 
+        // 4. sayfanın en altına in
+        Actions actions = new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.END).perform();
+
+        // 5. yukarı kaydır buttonun görünür ve erişilir olduğunu doğrula
+        Assert.assertTrue(tawUserHomePage.buttonHomePageBodyYukariKaydirButton.isDisplayed());
+        Assert.assertTrue(tawUserHomePage.buttonHomePageBodyYukariKaydirButton.isEnabled());
+
+        // 7. yukarı kaydır buttonuna tıkla
+        tawUserHomePage.buttonHomePageBodyAcceptCookieButton.click();
+        tawUserHomePage.buttonHomePageBodyYukariKaydirButton.click();
+
+        // 8. Slider kısmının görünür olduğunu doğrula
         Assert.assertTrue(tawUserHomePage.slider.isDisplayed());
 
         Driver.quitDriver();
