@@ -1,5 +1,6 @@
 package tests.berke_US_031_035_036_040;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -13,8 +14,14 @@ import utilities.Driver;
 import utilities.JSUtilities;
 import utilities.ReusableMethods;
 
+import java.util.List;
+
+
+
 public class US_031 {
     TawAdminPage tawAdminPage;
+    public WebElement packageSatir;
+    public WebElement editButton;
     @Test
     public void TC_01(){
         tawAdminPage = new TawAdminPage();
@@ -99,12 +106,63 @@ public class US_031 {
         tawAdminPage.packagesButton.click();
 
         //3. Daha önce eklenen package'ın sağ tarafında bulunan sarı "Edit" butonuna tıklanır
-        JSUtilities.scrollToElement(Driver.getDriver(), tawAdminPage.packageLocate);
-
+        tawAdminPage.packagesSearchBox.sendKeys(ConfigReader.getProperty("addNewPackageName") + Keys.ENTER);
+        tawAdminPage.packageEditButton.click();
 
         //4. Açılan sayfada ilgili tüm alanlar düzenlenir/editlenir ve ardından sayfanın alt kısmında bulunan "Submit" butonuna tıklanır
+        Actions actions = new Actions(Driver.getDriver());
+
+        actions.click(tawAdminPage.packagesNameBox)
+                .sendKeys(ConfigReader.getProperty("editPackageName")) //PackageNameBox
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("editSlugForPackage")).perform(); //Slugbox
+
+        String herkesteFarkliOlan = System.getProperty("user.dir");
+        String herkesteAyniOlan = "\\src\\test\\java\\utilities\\filesForUpload\\board-361516_640 - Copy.jpg";
+        String dosyaYolu = herkesteFarkliOlan + herkesteAyniOlan;
+
+        tawAdminPage.packagesChooseFileButton.sendKeys(dosyaYolu);
+
+        actions.click(tawAdminPage.packagesEditDescriptionTextBox)
+                .sendKeys(ConfigReader.getProperty("editPackageDescriptionTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("editPackageShortDescriptionTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("editPackageLocationTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("editPackageStartDate"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("editPackageEndDate"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("editPackageLastBookingDate"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("editPackageMapTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("editPackageItineraryTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("editPackagePrice"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("editPackagePolicyTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("editPackageTermsTextBox"))
+                .sendKeys(Keys.TAB) //is Featured?
+                .sendKeys(Keys.ARROW_DOWN) //yes
+                .sendKeys(Keys.TAB) // Destination
+                .sendKeys(Keys.ENTER) //search
+                .sendKeys(Keys.ARROW_DOWN) //seçim
+                .sendKeys(Keys.ENTER)
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("editPackageSEOTitleTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("editPackageSEOMetaDescriptionTextBox"))
+                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.ENTER).perform();
+
         //5. Çıkan alerts ile ya da açılan tablo yardımı ile ilgili bilgilerin editlendiği doğrulanır
-        ////*[@id="dataTable"]/tbody/tr[8]/td[7]/a[1]
+        Assert.assertTrue(tawAdminPage.newPackagesOnay.isDisplayed());
+
+        Driver.closeDriver();
+
     }
 
     @Test
@@ -120,7 +178,16 @@ public class US_031 {
         tawAdminPage.packagesButton.click();
 
         //3. Daha önce eklenen package'ın sağ tarafında bulunan kırmızı"Delete" butonuna tıklanır
+        tawAdminPage.packagesSearchBox.sendKeys(ConfigReader.getProperty("addNewPackageName") + Keys.ENTER);
+        tawAdminPage.packageDeleteButton.click();
+
         //4. Yukarıda çıkan bildirim/alert ekranında "OK" butonuna basılır
+        Alert alert = Driver.getDriver().switchTo().alert();
+        alert.accept();
+
         //5. Çıkan alerts ile ya da açılan tablo yardımı ile ilgili bilgilerin silindiği/kaldırıldığı doğrulanır
+        Assert.assertTrue(tawAdminPage.newPackagesOnay.isDisplayed());
+
+        Driver.closeDriver();
     }
 }

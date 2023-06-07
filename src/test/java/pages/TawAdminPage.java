@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
@@ -74,16 +75,24 @@ public class TawAdminPage {
     public  WebElement packagesDescriptionTextBox;
 
     //AdminPage >>> SolPanelList >>> Packages >>> AddNewPackagesPage >>> Onay
-    @FindBy(xpath = "//div[@class='toast-message']")
+    @FindBy(xpath = "//div[@class='toast toast-success']")
     public WebElement newPackagesOnay;
-
-    //AdminPage >>> SolPanelList >>> Packages >>> Listede daha önceki test'ten oluşturulan package locate!
-    @FindBy(xpath = "//*[text()='New Test Packages']")
-    public WebElement packageLocate;
 
     //AdminPage >>> SolPanelList >>> Packages >>> EditButton
     @FindBy(xpath = "//*[@class='btn btn-warning btn-sm']")
     public WebElement packageEditButton;
+
+    //AdminPage >>> SolPanelList >>> Packages >>> SearchBox
+    @FindBy(xpath = "//input[@type='search']")
+    public WebElement packagesSearchBox;
+
+    //AdminPage >>> SolPanelList >>> Packages >>> EditPackagesPage >>> DescriptionTextBox
+    @FindBy(xpath = "//*[@id=\"content\"]/div/form/div/div[2]/div[5]/div/div[3]/div[2]")
+    public  WebElement packagesEditDescriptionTextBox;
+
+    //AdminPage >>> SolPanelList >>> Packages >>> DeleteButonu
+    @FindBy(xpath = "//*[@id=\"dataTable\"]/tbody/tr/td[7]/a[2]")
+    public WebElement packageDeleteButton;
 
 
 }
