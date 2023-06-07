@@ -67,4 +67,7 @@ public class TawAdminPage {
     //AdminPage >>> SolPanelList >>> Packages >>> AddNewPackagesPage >>> ChooseFileButton
     @FindBy(xpath = "//*[@*='p_photo']")
     public  WebElement packagesChooseFileButton;
+
+
+
 }
