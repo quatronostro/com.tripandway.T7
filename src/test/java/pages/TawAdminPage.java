@@ -94,5 +94,31 @@ public class TawAdminPage {
     @FindBy(xpath = "//*[@id=\"dataTable\"]/tbody/tr/td[7]/a[2]")
     public WebElement packageDeleteButton;
 
+    //AdminPage >>> SolPanelList >>> Subscribers
+    @FindBy(xpath = "//*[@data-target='#collapseSubscriber']")
+    public WebElement subscribersButton;
 
+    //AdminPage >>> SolPanelList >>> Subscribers >>> AllSubscribersButton
+    @FindBy(xpath = "//*[@id=\"collapseSubscriber\"]/div/a[1]")
+    public WebElement allSubscribersButton;
+
+    //AdminPage >>> SolPanelList >>> Subscribers >>> AllSubscribers >>> SLButton
+    @FindBy(className = "sorting_asc")
+    public WebElement allSubscribersSLButton;
+
+    //AdminPage >>> SolPanelList >>> Subscribers >>> AllSubscribers >>> ListİlkHücre
+    @FindBy(xpath = "//*[@id=\"dataTable\"]/tbody/tr[1]/td[1]")
+    public WebElement lastSubscriberNumber;
+
+    //AdminPage >>> SolPanelList >>> Subscribers >>> AllSubscribers >>> Listenin en altındaki "Showing 1 to 10 of 173 entries" texti
+    @FindBy(id = "dataTable_info")
+    public WebElement dataTableInfoText;
+
+    //AdminPage >>> SolPanelList >>> Subscribers >>> Send Email to Subscribers >>> SubjectBox
+    @FindBy(xpath = "//*[@*='form-control']")
+    public WebElement sendEmailToSubscribersSubjectBox;
+
+    //AdminPage >>> SolPanelList >>> Subscribers >>> Send Email to Subscribers
+    @FindBy(xpath = "//*[@id=\"collapseSubscriber\"]/div/a[2]")
+    public WebElement sendEmailToSubscribersButton;
 }
