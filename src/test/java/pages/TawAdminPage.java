@@ -69,6 +69,7 @@ public class TawAdminPage {
     @FindBy(xpath = "//input[@*='p_photo']")
     public  WebElement packagesChooseFileButton;
 
+
     //AdminPage >>> SolPanelList >>> Packages >>> AddNewPackagesPage >>> DescriptionTextBox
     @FindBy(xpath = "//*[@id=\"content\"]/div/form/div/div[2]/div[4]/div/div[3]/div[2]")
     public  WebElement packagesDescriptionTextBox;
@@ -92,5 +93,6 @@ public class TawAdminPage {
     //AdminPage >>> SolPanelList >>> Packages >>> DeleteButonu
     @FindBy(xpath = "//*[@id=\"dataTable\"]/tbody/tr/td[7]/a[2]")
     public WebElement packageDeleteButton;
+
 
 }
