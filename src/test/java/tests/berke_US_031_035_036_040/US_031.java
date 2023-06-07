@@ -5,16 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.locators.RelativeLocator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TawAdminPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.JSUtilities;
-import utilities.ReusableMethods;
 
-import java.util.List;
 
 
 
