@@ -10,7 +10,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class C08_US_003_Testimonial {
+public class C08_US_003_HomePageTestimonial {
     // US_003 >>> Bir ziyaretçi olarak Home page sayfasının body bölümündeki fonksiyonların
     // görünür ve aktif olduğunu görüntüleyebildiğimi doğrulayabilmeliyim
 

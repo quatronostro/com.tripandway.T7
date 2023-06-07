@@ -1,5 +1,7 @@
 package pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
@@ -7,6 +9,7 @@ import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -798,7 +801,281 @@ public class TawUserHomePage {
     @FindBy(xpath = "(//div[@class='owl-stage'])[4]/div[4]/div/div[2]/div")
     public WebElement  labelHomePageBodyTestimonialDorduncuUyeAciklamaTexti;
 
+    //HomePage >>> Latest Blog kısmının tamamı
+    @FindBy(xpath = "//div[@class='blog-area pt_80 pb_80']")
+    public WebElement homePageBodyLatestBlogAlani;
 
+    //HomePage >>> Latest Blog kısmının baslik text'i
+    @FindBy(xpath = "//h2[text()='Latest Blog']")
+    public WebElement labelHomePageBodyLatestBlogBaslikTexti;
+
+    //HomePage >>> Latest Blog kısmının aciklama text'i
+    @FindBy(xpath = "(//div[@class='main-headline'])[5]/p")
+    public WebElement labelHomePageBodyLatestBlogAciklamaTexti;
+
+    //HomePage >>> Latest Blog kısmının sola kaydir buttonu
+    @FindBy(xpath = "(//div[@class='owl-nav'])[2]/div[1]")
+    public WebElement buttonHomePageBodyLatestBlogSolaKaydirButtonu;
+
+    //HomePage >>> Latest Blog kısmının saga kaydir buttonu
+    @FindBy(xpath = "(//div[@class='owl-nav'])[2]/div[2]")
+    public WebElement buttonHomePageBodyLatestBlogSagaKaydirButtonu;
+
+
+    //HomePage >>> LatestBlog kısmının bütün bloglarin Xpath'i
+    public List<String> homePageBodyLatestBlogByutunBloglarXpath(WebDriver driver){
+
+        List<WebElement> elements = driver.findElements(By.xpath("(//div[@class='owl-stage'])[5]/div"));
+
+        int sayac = 5;
+        int sayac2 =-1;
+        List<String> list = new ArrayList<>();
+
+        while (sayac2!=elements.size()-9){
+            list.add("(//div[@class='owl-stage'])[5]/div["+sayac+"]");
+            sayac++;
+            sayac2++;
+        }
+        return list;
+    }
+
+    //HomePage >>> LatestBlog kısmının bütün bloglarin baslik texti
+    public List<String> homePageBodyLatestBlogByutunBloglarBaslikText(WebDriver driver){
+
+        List<WebElement> elements = driver.findElements(By.xpath("(//div[@class='owl-stage'])[5]/div/div/div/a"));
+
+        int sayac = 5;
+        int sayac2 =-1;
+        List<String> list = new ArrayList<>();
+
+        while (sayac2!=elements.size()-9){
+            list.add("(//div[@class='owl-stage'])[5]/div["+sayac+"]/div/div/a");
+            sayac++;
+            sayac2++;
+        }
+        return list;
+    }
+
+    //HomePage >>> LatestBlog kısmının bütün bloglarin aciklama texti
+    public List<String> homePageBodyLatestBlogByutunBloglarAciklamaText(WebDriver driver){
+
+        List<WebElement> elements = driver.findElements(By.xpath("(//div[@class='owl-stage'])[5]/div/div/div/p[2]"));
+
+        int sayac = 5;
+        int sayac2 =-1;
+        List<String> list = new ArrayList<>();
+
+        while (sayac2!=elements.size()-9){
+            list.add("(//div[@class='owl-stage'])[5]/div["+sayac+"]/div/div/p[2]");
+            sayac++;
+            sayac2++;
+        }
+        return list;
+    }
+
+    //HomePage >>> LatestBlog kısmının bütün bloglarin buttonlari
+    public List<String> homePageBodyLatestBlogByutunBloglarButton(WebDriver driver){
+
+        List<WebElement> elements = driver.findElements(By.xpath("(//div[@class='owl-stage'])[5]/div/div/div/div/a"));
+
+        int sayac = 5;
+        int sayac2 =-1;
+        List<String> list = new ArrayList<>();
+
+        while (sayac2!=elements.size()-9){
+            list.add("(//div[@class='owl-stage'])[5]/div["+sayac+"]/div/div/div/a");
+            sayac++;
+            sayac2++;
+        }
+        return list;
+    }
+    //HomePage >>> Our Client kısmının tamamı
+    @FindBy(xpath = "//div[@class='brand-area bg-area pt_80 pb_80']")
+    public WebElement homePageBodyOurClientAlani;
+
+    //HomePage >>> Our Client kısmının logolarının tamamı
+    @FindBy(xpath = "(//div[@class='owl-stage'])[6]/div")
+    public List<WebElement> logoHomePageBodyOurClientLogolarinTamami;
+
+    //Footer >>> Featured Packages kısmı
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[1]")
+    public WebElement footerFeaturedPackagesinTamami;
+
+    //Footer >>> Featured Packages kısmının baslik texti
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[1]/div/h3")
+    public WebElement labelFooterFeaturedPackagesBaslikTexti;
+
+    //Footer >>> Featured Packages kısmının birinci linki
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[1]/div/ul/li[1]/a")
+    public WebElement linkFooterFeaturePackagesBirinciLink;
+
+    //Footer >>> Featured Packages kısmının Ikinci linki
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[1]/div/ul/li[2]/a")
+    public WebElement linkFooterFeaturePackagesIkinciLink;
+
+    //Footer >>> Featured Packages kısmının Ucuncu linki
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[1]/div/ul/li[3]/a")
+    public WebElement linkFooterFeaturePackagesUcuncuLink;
+
+    //Footer >>> Featured Packages kısmının Dorduncu linki
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[1]/div/ul/li[4]/a")
+    public WebElement linkFooterFeaturePackagesDorduncuLink;
+
+    //Footer >>> Featured Packages kısmının Besinci linki
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[1]/div/ul/li[5]/a")
+    public WebElement linkFooterFeaturePackagesBesinciLink;
+
+    //Header >>> Header Services Linki
+    @FindBy(xpath = "//ul[@class='sf-menu sf-js-enabled sf-arrows']/li[2]")
+    public WebElement linkHeaderServicesLinki;
+
+    //Services >>> Services birinci hizmet
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[1]")
+    public WebElement servicesPageBirinciHizmet;
+
+    //Services >>> Services birinci hizmet logosu
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[1]//div[1]/a/i")
+    public WebElement logoServicesPageBirinciHizmetLogosu;
+
+    //Services >>> Services birinci hizmet baslik texti
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[1]//div[1]/a/div/h4")
+    public WebElement labebServicesPageBirinciHizmetBaslikTexti;
+
+    //Services >>> Services birinci hizmet aciklama texti
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[1]//div[1]/a/div/p[2]")
+    public WebElement labebServicesPageBirinciHizmetAciklamaTexti;
+
+    //Services >>> Services Ikinci hizmet
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[2]")
+    public WebElement servicesPageIkinciHizmet;
+
+    //Services >>> Services Ikinci hizmet logosu
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[2]//div[1]/a/i")
+    public WebElement logoServicesPageIkinciHizmetLogosu;
+
+    //Services >>> Services Ikinci hizmet baslik texti
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[2]//div[1]/a/div/h4")
+    public WebElement labebServicesPageIkinciHizmetBaslikTexti;
+
+    //Services >>> Services Ikinci hizmet aciklama texti
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[2]//div[1]/a/div/p[2]")
+    public WebElement labebServicesPageIkinciHizmetAciklamaTexti;
+
+    //Services >>> Services Ucuncu hizmet
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[3]")
+    public WebElement servicesPageUcuncuHizmet;
+
+    //Services >>> Services Ucuncu hizmet logosu
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[3]//div[1]/a/i")
+    public WebElement logoServicesPageUcuncuHizmetLogosu;
+
+    //Services >>> Services Ucuncu hizmet baslik texti
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[3]//div[1]/a/div/h4")
+    public WebElement labebServicesPageUcuncuHizmetBaslikTexti;
+
+    //Services >>> Services Ucuncu hizmet aciklama texti
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[3]//div[1]/a/div/p[2]")
+    public WebElement labebServicesPageUcuncuHizmetAciklamaTexti;
+
+    //Services >>> Services Dorduncu hizmet
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[4]")
+    public WebElement servicesPageDorduncuHizmet;
+
+    //Services >>> Services Dorduncu hizmet logosu
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[4]//div[1]/a/i")
+    public WebElement logoServicesPageDorduncuHizmetLogosu;
+
+    //Services >>> Services Dorduncu hizmet baslik texti
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[4]//div[1]/a/div/h4")
+    public WebElement labebServicesPageDorduncuHizmetBaslikTexti;
+
+    //Services >>> Services Dorduncu hizmet aciklama texti
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[4]//div[1]/a/div/p[2]")
+    public WebElement labebServicesPageDorduncuHizmetAciklamaTexti;
+
+    //Services >>> Services Besinci hizmet
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[5]")
+    public WebElement servicesPageBesinciHizmet;
+
+    //Services >>> Services Besinci hizmet logosu
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[5]//div[1]/a/i")
+    public WebElement logoServicesPageBesinciHizmetLogosu;
+
+    //Services >>> Services Besinci hizmet baslik texti
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[5]//div[1]/a/div/h4")
+    public WebElement labebServicesPageBesinciHizmetBaslikTexti;
+
+    //Services >>> Services Besinci hizmet aciklama texti
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[5]//div[1]/a/div/p[2]")
+    public WebElement labebServicesPageBesinciHizmetAciklamaTexti;
+
+    //Services >>> Services Altinci hizmet
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[6]")
+    public WebElement servicesPageAltinciHizmet;
+
+    //Services >>> Services Altinci hizmet logosu
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[6]//div[1]/a/i")
+    public WebElement logoServicesPageAltinciHizmetLogosu;
+
+    //Services >>> Services Altinci hizmet baslik texti
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[6]//div[1]/a/div/h4")
+    public WebElement labebServicesPageAltinciHizmetBaslikTexti;
+
+    //Services >>> Services Altinci hizmet aciklama texti
+    @FindBy(xpath = "(//div[@class='row'])[4]/div[6]//div[1]/a/div/p[2]")
+    public WebElement labebServicesPageAltinciHizmetAciklamaTexti;
+
+    //HomePage >>> HomePage body yukarı kaydır buttonu
+    @FindBy(xpath = "//i[@class='fas fa-angle-up']")
+    public WebElement buttonHomePageBodyYukariKaydirButton;
+
+    //HomePage >>> HomePage body accept cookie buttonu
+    @FindBy(xpath = "//button[@class='wpcc-btn']")
+    public WebElement buttonHomePageBodyAcceptCookieButton;
+
+    //HomePage >>> Header login buttonu
+    @FindBy(xpath = "(//div[@class='top-header-right'])/a[2]")
+    public WebElement buttonHeaderLoginButtonu;
+
+    //HomePage >>> Login Page email address Text box
+    @FindBy(xpath = "//input[@name='traveller_email']")
+    public WebElement loginPageEmailAdressTextBox;
+
+    //HomePage >>> Login Page password Text Box
+    @FindBy(xpath = "//input[@name='traveller_password']")
+    public WebElement loginPagePasswordTextBox;
+
+    //HomePage >>> Login Page login buttonu
+    @FindBy(xpath = "//button[text()='Login']")
+    public WebElement buttonLoginPageLoginButtonu;
+
+    //UserDashboard >>> Dashboard buttonu
+    @FindBy(xpath = "//div[@class='top-header-right']")
+    public WebElement buttonUserDashboardDashboardButtonu;
+
+    //Header >>> header kısmı tripandway logosu
+    @FindBy(xpath = "//img[@alt='Logo']")
+    public WebElement logoUserDashboardTripAndWayLogosu;
+
+    //Footer >>> Adress bölümünün tamamı
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]")
+    public WebElement footerAddressBolumunTamami;
+
+    //Footer >>> Adress bölümünün baslik texti
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]/div/h3")
+    public WebElement labelFooterAddressBaslikTexti;
+
+    //Footer >>> Adress bölümünün birinci satır texti
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]/div/div[1]/div[2]")
+    public WebElement labelFooterAddressBirinciSatirTexti;
+
+    //Footer >>> Adress bölümünün Ikinci satır texti
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]/div/div[2]/div[2]")
+    public WebElement labelFooterAddressIkinciSatirTexti;
+
+    //Footer >>> Adress bölümünün Ucuncu satır texti
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]/div/div[3]/div[2]")
+    public WebElement labelFooterAddressUcuncuSatirTexti;
 
 }
 
