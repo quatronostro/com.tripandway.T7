@@ -14,9 +14,9 @@ import java.util.List;
 
 public class US_025 {
     /*
-       Package ödemesi tamamlandıktan sonra kullanıcı sayfasında
-        payment historyden ödememi kontrol edebildiğimi doğrulayabilmeliyim
-    */
+        Package ödemesi tamamlandıktan sonra kullanıcı sayfasında
+         payment historyden ödememi kontrol edebildiğimi doğrulayabilmeliyim
+     */
     TawUserDashboard tawUserDashboard;
     TawUserHomePage tawUserHomePage;
     private JavascriptExecutor jsExecutor;
@@ -79,10 +79,11 @@ public class US_025 {
         actions.sendKeys(ConfigReader.getProperty("creditCardExpNumber")).sendKeys(Keys.TAB).perform();
         actions.sendKeys(ConfigReader.getProperty("creditCardCvcNumber")).sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
         Driver.getDriver().switchTo().defaultContent(); // Iframe' den cikis
-        ReusableMethods.wait(10);
-        java.util.List<WebElement> frames = Driver.getDriver().findElements(By.tagName("frame"));
-        frames.addAll(Driver.getDriver().findElements(By.tagName("iframe")));
+        ReusableMethods.wait(5);
 
+        //java.util.List<WebElement> frames = Driver.getDriver().findElements(By.tagName("frame"));
+        //frames.addAll(Driver.getDriver().findElements(By.tagName("iframe")));
+        /*
         // Her bir frame'i kontrol ederek alert mesajını yakalayın
         for (WebElement frame : frames) {
             try {
@@ -90,7 +91,7 @@ public class US_025 {
                 Alert alert = Driver.getDriver().switchTo().alert();
 
                 // Alert mesajının metnini kontrol edin
-                if (alert.getText().contains("Kart bilgilerinizi kaydetmek istiyor musunuz?")) {
+                if (alert.getText().contains("Kart kaydesilsin mi?")) {
                     // Alert mesajına "Hayır" yanıtını verin
                     alert.dismiss();
                 }
@@ -100,24 +101,31 @@ public class US_025 {
                 continue;
             }
         }
+
+         */
+
+        Driver.closeDriver();
     }
 
     @Test
     public void tc_02() {
 
         // 1- http://qa.tripandway.com sayfasina gidilir
-        Driver.getDriver().switchTo().newWindow(WindowType.TAB);
-        ReusableMethods.switchToWindow("Yeni Sekme");
         Driver.getDriver().get(ConfigReader.getProperty("tawUrl"));
-        //ReusableMethods.wait(1);
-        //tawUserHomePage.websiteUsesCookiesButton.click();
-
-        // 2- Kullanıcı login olmamış ise login olmalıdır
         tawUserDashboard = new TawUserDashboard();
         tawUserHomePage = new TawUserHomePage();
-        jsExecutor = (JavascriptExecutor) Driver.getDriver();
-        Boolean login = true;
         ReusableMethods.wait(1);
+        tawUserHomePage.websiteUsesCookiesButton.click();
+        // 2- Kullanıcı login olmamış ise login olmalıdır
+        tawUserHomePage.userLoginElement.click();
+        // Girilecek textbox ve button elemenlerinin gözükmesi için sayfa belirli konuma gelir
+        jsExecutor = (JavascriptExecutor) Driver.getDriver();
+        jsExecutor.executeScript("window.scrollTo(0, 2000);");
+        // User kullanıcı adı ve şifre girilerek login butonuna basılır
+        tawUserHomePage.tawUserAccountLogin();
+
+
+        /*
 
         if (login) {
             Assert.assertTrue(tawUserHomePage.dashboardElement.isDisplayed(), "Dashboard elementi görüntülenmiyor.");
@@ -127,7 +135,7 @@ public class US_025 {
             tawUserHomePage.userLoginElement.click();
             tawUserHomePage.tawUserAccountLogin();
         }
-
+        */
 
         // 3- Dashboard sayfasında, "Payment History" linki olduğu doğrulanmalı ve tıklanmalıdır
         Assert.assertTrue(tawUserDashboard.paymetHistorysElement.isDisplayed());
@@ -150,9 +158,9 @@ public class US_025 {
          */
         ReusableMethods.wait(2);
         actualPackageTitle = tawUserDashboard.paymentHistoryPagePackageName.getText();
-        System.out.println(actualPackageTitle + " ---Ac Package Title");
-        System.out.println(expectedPackageTitle + " ---Ex Package Title");
         Assert.assertTrue(actualPackageTitle.contains(expectedPackageTitle));
+        System.out.println(expectedPackageTitle + " ---Expected Package Title");
+        System.out.println(actualPackageTitle + " ---Actual Package Title");
 /*
         for (WebElement eachSatir : satirElementleriList
         ) {
@@ -168,15 +176,16 @@ public class US_025 {
         jsExecutor.executeScript("window.scrollTo(0, 200);");
         List<WebElement> orderDetailList = Driver.getDriver().findElements(By.xpath("//tbody/tr/td[2]"));
         actualTotalPaid = tawUserDashboard.orderDetailPaidAmountElement.getText();
-        System.out.println(actualTotalPaid + " --- Ac Total paid");
-        System.out.println(expectedTotalPaid + " ---Ex Total paid");
+        System.out.println(expectedTotalPaid + " ---Expected Total paid");
+        System.out.println(actualTotalPaid + " --- Actual Total paid");
         String expectedPaymentStatus = "Completed";
         String actualPaymentsStatus = tawUserDashboard.orderDetailPaymentStatusElement.getText();
-        System.out.println(actualPaymentsStatus + " ---Ac Payment Status");
-        System.out.println(expectedPaymentStatus + " ---Ex Payment Status");
         Assert.assertEquals(actualTotalPaid,expectedTotalPaid);
         Assert.assertEquals(actualPaymentsStatus,expectedPaymentStatus);
+        System.out.println(expectedPaymentStatus + " ---Expected Payment Status");
+        System.out.println(actualPaymentsStatus + " ---Actual Payment Status");
 
-        Driver.closeDriver();
+
+        Driver.quitDriver();
     }
 }

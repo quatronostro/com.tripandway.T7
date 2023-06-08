@@ -594,7 +594,7 @@ public class TawUserHomePage {
     public WebElement newsletterEmailSubmitAlertMessage;
 
     //HomePage >>> Coockies Accept Button
-    @FindBy(xpath = "//button[@type='button']")
+    @FindBy(xpath = "//button[@class='wpcc-btn']")
     public WebElement  websiteUsesCookiesButton;
 
     //HomePage >>> Terms and Conditions Element
