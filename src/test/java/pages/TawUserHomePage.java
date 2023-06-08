@@ -1205,5 +1205,22 @@ public class TawUserHomePage {
     @FindBy(xpath = "//div[@class='toast toast-success']")
     public WebElement alertOnay;
 
+    //HomePage >>> Header >>> DestinationsButton
+    @FindBy(xpath = "//*[@id=\"menu\"]/li[3]/a")
+    public WebElement destinationsButton;
+
+    //HomePage >>> Destinations >>> AllDestinations
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[1]/div[2]")
+    public WebElement destinationFirstButton;
+
+    //HomePage >>> Destinations >>> AllDestinations
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[2]/div[2]")
+    public WebElement destinationSecondButton;
+
+    //HomePage >>> Destinations >>> AllDestinations
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[3]/div[2]")
+    public WebElement destinationThirdButton;
+
+
 }
 
