@@ -249,5 +249,7 @@ public class TawAdminPage {
     @FindBy(xpath = "//*[@id=\"content\"]/nav/ul/li[2]/div/a[2]")
     public WebElement changePhotoButton;
 
-
+    //AdminPage >>> adminProfileDropDownMenu >>>  logout button
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
+    public WebElement buttonAdminPageAdminProfileLoguotButton;
 }
