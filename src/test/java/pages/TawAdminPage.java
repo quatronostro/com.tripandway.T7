@@ -249,6 +249,11 @@ public class TawAdminPage {
     @FindBy(xpath = "//*[@id=\"content\"]/nav/ul/li[2]/div/a[2]")
     public WebElement changePhotoButton;
 
+
+    //AdminPage >>> adminProfileDropDownMenu >>>  logout button
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
+    public WebElement buttonAdminPageAdminProfileLoguotButton;
+
     // AdminPage >>> Blog Section Menu
     @FindBy(xpath = "//a[@aria-controls='collapseBlog']")
     public WebElement blogSectionMenu;
@@ -291,7 +296,6 @@ public class TawAdminPage {
 
     @FindBy(xpath = "//*[@class='btn btn-danger btn-sm']")
     public WebElement blogDeleteSuccessfulyMessage;
-
 
 
 
