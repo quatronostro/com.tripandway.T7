@@ -9,9 +9,9 @@
 
 * Site ve Admin URL'leri aşağıdaki şekilde configuration.properties dosyasında yer alır
 
-&nbsp; &nbsp;   `tawUrl = "qa.tripandway.com`
+&nbsp; &nbsp;   `tawUrl = qa.tripandway.com`
 
-&nbsp; &nbsp;   `tawAdminUrl = "qa.tripandway.com/admin`
+&nbsp; &nbsp;   `tawAdminUrl = qa.tripandway.com/admin`
 
 <br/>
 
