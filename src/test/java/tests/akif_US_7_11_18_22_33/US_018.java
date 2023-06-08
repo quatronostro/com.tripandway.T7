@@ -1,5 +1,6 @@
 package tests.akif_US_7_11_18_22_33;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -12,10 +13,13 @@ import utilities.TestBaseReport;
 
 public class US_018 extends TestBaseReport {
 
+    Faker faker;
+
     //US_018>>>> "Kullanıcı olarak siteye kayıt olabilmeliyim ve Girdiğim bilgiler gerekli kriterleri sağlamazsa gerekli uyarıları alabilmeliyim"
 
     @Test
     public void Test() throws InterruptedException {
+        faker = new Faker();
 
         extentTest =extentReports.createTest("GizlilikPolitikasıTesti");
 
@@ -65,9 +69,9 @@ public class US_018 extends TestBaseReport {
 
         //Geçerli kullanıcı bilgileri girerek kayıt olunabildiği doğrulanır.
 
-        isim.sendKeys("Akif Sen");
-        eMail.sendKeys("tobojos287@rockdian.com");
-        sifre.sendKeys("Team.113");
+        isim.sendKeys(faker.name().fullName());
+        eMail.sendKeys(faker.internet().emailAddress());
+        sifre.sendKeys(faker.internet().password());
         loginButonu.click();
         Thread.sleep(500);
 
