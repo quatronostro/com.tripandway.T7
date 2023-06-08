@@ -800,5 +800,55 @@ public class TawUserHomePage {
 
 
 
+
+    //Homepage>>>>footer kısmı facebook ikon
+
+    @FindBy(className = "fab fa-facebook-f")
+    public WebElement HomepageFooterFacebookIkon;
+
+
+    //Homepage>>>>footer kısmı Twitter ikon
+
+    @FindBy(xpath = "//div[16]/div/div/div[4]/div/ul/li[2]/a/i")
+    public WebElement HomepageFooterTwitterIkon;
+
+
+
+    //Homepage>>>>footer kısmı Linkedin ikon
+
+    @FindBy(xpath = "//div/div[4]/div/ul/li[3]/a/i")
+    public WebElement HomepageFooterLinkedinIkon;
+
+
+    //Homepage>>>>footer kısmı Prinerest ikon
+
+    @FindBy(xpath = "//div[4]/div/ul/li[4]/a")
+    public WebElement HomepageFooterPrinterestIkon;
+
+
+    //Homepage>>>>footer kısmı Instagram ikon
+
+    @FindBy(xpath = "//div[4]/div/ul/li[5]/a/i")
+    public WebElement HomepageFooterInstagramIkon;
+
+
+    //Homepage>>>footer kısmı Privacy Policy
+
+    @FindBy(xpath ="//a[@href=\"https://qa.tripandway.com/privacy-policy\"]")
+    public WebElement HomePageFooterPravcyPolicy;
+
+    @FindBy(xpath = "//a[@href=\"https://qa.tripandway.com/traveller/register\"]")
+    public WebElement labelRegistrationgiris;
+
+
+    @FindBy(className = "footer-social")
+    public WebElement HomePageFooterSosyalMedya;
+
+
+
+
+
+
+
 }
 
