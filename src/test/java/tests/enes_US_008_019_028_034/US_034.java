@@ -1,4 +1,4 @@
-package tests.aziz_US_001_003_004_012;
+package tests.enes_US_008_019_028_034;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,13 +11,13 @@ import utilities.Driver;
 import java.util.List;
 import java.util.Set;
 
-public class C15_US_034 {
+public class US_034 {
     // Admin girişi yaptıktan sonra Order bölümüne girerek
     // herhangi bir siparişin faturasının görüntülenebildiğini
     // doğrulayabilmeliyim
 
     @Test
-    public void us_034_tc_01(){
+    public void TC_01(){
         // 1. browser'ı aç
         // 2. https://qa.tripandway.com/admin adresine git
         TawAdminPage tawAdminPage = new TawAdminPage();

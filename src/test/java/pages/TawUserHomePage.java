@@ -1,12 +1,17 @@
 package pages;
 
+
+import com.github.dockerjava.api.model.Link;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 import java.util.ArrayList;
@@ -17,6 +22,17 @@ public class TawUserHomePage {
 
     public TawUserHomePage() {
         PageFactory.initElements(Driver.getDriver(), this);
+    }
+
+    public static TawUserHomePage tawUserLogin;
+
+    public static void tawUserAccountLogin(){
+
+        tawUserLogin = new TawUserHomePage();
+
+        tawUserLogin.userEmailTextbox.sendKeys(ConfigReader.getProperty("userEmail"));
+        tawUserLogin.userPasswordTextbox.sendKeys(ConfigReader.getProperty("userPass"));
+        tawUserLogin.userLoginSubmitButton.click();
     }
 
 
@@ -565,9 +581,107 @@ public class TawUserHomePage {
     @FindBy(xpath = "(//a[text()='See All Destinations'])")
     public WebElement buttonHomePageBodySeeAllDestinationsButton;
 
+    //HomePage >>> Newsletter Email Textbox Kutusu
+    @FindBy(xpath = "//input[@type='text']")
+    public WebElement newsletterTextbox;
+
+    //HomePage >>> Newsletter Email Submit Button
+    @FindBy(xpath = "//input[@type='submit']")
+    public WebElement newsletterSubmitButton;
+
+    //HomePage >>> Newsletter Email Confirm or Exists Alert Message
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement newsletterEmailSubmitAlertMessage;
+
+    //HomePage >>> Coockies Accept Button
+    @FindBy(xpath = "//button[@type='button']")
+    public WebElement  websiteUsesCookiesButton;
+
+    //HomePage >>> Terms and Conditions Element
+    @FindBy(linkText = "Terms and Conditions")
+    public WebElement termsAndConditionsElement;
+
+    // Terms and Conditions >>> Body Baslik Yazisi
+    @FindBy(xpath = "(//*[text()='Terms and Conditions'])[2]")
+    public WebElement termsAndConditionsTitleText;
+
+    //HomePage >>> About Us Element
+    @FindBy(xpath = "(//a[@href=\"https://qa.tripandway.com/about\"])[2]")
+    public WebElement aboutUsElement;
+
+    // About Us >>> Sayfa İçeriğindeki OUR VISION Başlığı
+    @FindBy(xpath = "//div[@class='about-text mt_30']/h3[1]")
+    public WebElement aboutUsPageSubtext;
+
+    // HomePage  >>> Login Elementi
+    @FindBy(linkText = "Login")
+    public WebElement userLoginElement;
+
+    // HomePage  >>> Login >>> Email Textbox
+    @FindBy(xpath = "(//input[@type='text'])[1]")
+    public WebElement userEmailTextbox;
+
+    // HomePage  >>> Login >>> Password Textbox
+    @FindBy(xpath = "//input[@type='password']")
+    public WebElement userPasswordTextbox;
+
+    // HomePage  >>> Login >>> Login Submit Button
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement userLoginSubmitButton;
+
+    // Home Page   >>>  Header Package Elementi
+    @FindBy(xpath = "(//nav/ul/li[4])/a")
+    public WebElement packageElement;
+
+    // Home Page   >>> Packages
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/package/7-days-in-istanbul']")
+    public WebElement istanbulIn7DaysPackageElement;
+
+    // Home Page   >>> Packages >>> ilgili Turun >>> Book Your Seat Butonu
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement paymentBookYourSeatButton;
+
+    // Home Page >>> Packages >>> ilgili Turun >>> Book Your Seat Butonu >>> Order Detail >>> Package Name
+    @FindBy(xpath = "//tbody/tr[2]/td[1]")
+    public WebElement bookinDetailPackageName;
+
+    // Home Page >>> Packages >>> ilgili Turun >>> Book Your Seat Butonu >>> Order Detail >> Total Paid text
+    @FindBy(xpath = "//tbody/tr[4]/th[2]")
+    public WebElement bookingDetailTotalPaidUsd;
+
+    // Home Page >>> Packages >>> ilgili Turun >>> Book Your Seat Butonu >>> Order Detail >> Paid Stripe Card Button
+    @FindBy(xpath = "//*[text()='Pay with Card']")
+    public WebElement payWithCardButton;
+
+    @FindBy(xpath = "//input[@x-autocompletetype='cc-number']")
+    public WebElement creditCardNumber;
+
+    @FindBy(id = "//input[@placeholder='MM / YY']")
+    public WebElement creditCardExpDate;
+
+    @FindBy(id = "//input[@placeholder='CVC']")
+    public WebElement creditCardCvcCode;
+
+    @FindBy(xpath = "//span[@class='iconTick']")
+    public WebElement creditCardPaidButton;
+
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/traveller/dashboard']")
+    public WebElement dashboardElement;
+
+
+
+
+
+
+
+
+
+
+
     //HomePage >>> Team Members Kısminin tamamı
     @FindBy(xpath = "//div[@class='team-area bg-area pt_80 pb_80']")
     public WebElement homePageBodyTeamMembersAlani;
+
 
     //HomePage >>> Team Members Kısminin baslik texti
     @FindBy(xpath = "//h2[text()='Team Members']")
@@ -1033,6 +1147,7 @@ public class TawUserHomePage {
     @FindBy(xpath = "//button[@class='wpcc-btn']")
     public WebElement buttonHomePageBodyAcceptCookieButton;
 
+
     //HomePage >>> Header login buttonu
     @FindBy(xpath = "(//div[@class='top-header-right'])/a[2]")
     public WebElement buttonHeaderLoginButtonu;
@@ -1076,6 +1191,19 @@ public class TawUserHomePage {
     //Footer >>> Adress bölümünün Ucuncu satır texti
     @FindBy(xpath = "(//div[@class='row'])[26]/div[4]/div/div[3]/div[2]")
     public WebElement labelFooterAddressUcuncuSatirTexti;
+
+
+    //HomePage >>> header >>>> ContactButton
+    @FindBy(xpath = "//*[@id=\"menu\"]/li[8]/a")
+    public WebElement contactButton;
+
+    //HomePage >>> header >>>> ContactPage >>> ContactFormName
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[1]/div/form/div/div[1]/input")
+    public WebElement contactFromNameBox;
+
+    //Homepage >>> AlertOnay
+    @FindBy(xpath = "//div[@class='toast toast-success']")
+    public WebElement alertOnay;
 
 }
 

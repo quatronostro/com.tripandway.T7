@@ -1,4 +1,4 @@
-package tests.aziz_US_001_003_004_012;
+package tests.enes_US_008_019_028_034;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -9,14 +9,14 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class C16_US_008 {
+public class US_008 {
 
     // Bir ziyaretçi olarak footer bölümünde firma iletişim
     // bilgilerinin görüntülenebilir durumda olduğunu doğrulayabilmeliyim
 
 
     @Test(priority = 1)
-    public void us_008_tc_01(){
+    public void TC_01(){
         // 1. browser'ı aç
         // 2. https://qa.tripandway.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("tawUrl"));

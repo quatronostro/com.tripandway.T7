@@ -1,6 +1,5 @@
-package tests.aziz_US_001_003_004_012;
+package tests.enes_US_008_019_028_034;
 
-import org.apache.http.util.Asserts;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -9,13 +8,13 @@ import pages.TawAdminPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C14_US_028 {
+public class US_028 {
     // Admin girişi yaptıktan sonra Blog Section bölümünde Kategegoriler kısmına
     // yeni kategori ekleyip eklediğim kategorinin düzenlenebildiğini
     // ve silinebildiğini sırayla doğrulayabilmeliyim
 
     @Test(priority = 1)
-    public void us_028_tc_01(){
+    public void TC_01(){
         // 1. browser'ı aç
         // 2. https://qa.tripandway.com/admin adresine git
         TawAdminPage tawAdminPage = new TawAdminPage();
@@ -61,7 +60,7 @@ public class C14_US_028 {
     }
 
     @Test(priority = 2)
-    public void us_028_tc_02(){
+    public void TC_02(){
         // 1. browser'ı aç
         // 2. https://qa.tripandway.com/admin adresine git
         TawAdminPage tawAdminPage = new TawAdminPage();
@@ -106,6 +105,8 @@ public class C14_US_028 {
         String actualDeleteText = tawAdminPage.blogSectionCategoryDeleteAlert.getText();
 
         Assert.assertTrue(actualDeleteText.contains(expectedDeleteText));
+
+        Driver.closeDriver();
 
     }
 
