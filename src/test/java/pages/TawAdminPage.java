@@ -71,8 +71,9 @@ public class TawAdminPage {
     public WebElement packagesNameBox;
 
     //AdminPage >>> SolPanelList >>> Packages >>> AddNewPackagesPage >>> ChooseFileButton
-    @FindBy(xpath = "//*[@*='p_photo']")
+    @FindBy(xpath = "//input[@*='p_photo']")
     public  WebElement packagesChooseFileButton;
+
 
     //AdminPage >>> BlogSection
     @FindBy(xpath = "//span[text()='Blog Section']")
@@ -125,10 +126,12 @@ public class TawAdminPage {
     //AdminPage >>> Order >>> Order page
     public WebElement orderPageRandomDetailButtonXpath(WebDriver driver){
 
-        Random rnd = new Random();
-        int randomSayi= rnd.nextInt(11);
+
         WebElement sonelement;
         while (true){
+            Random rnd = new Random();
+            int randomSayi= rnd.nextInt(11);
+
             if (randomSayi>0){
                 WebElement element = driver.findElement(By.xpath("//tbody/tr["+randomSayi+"]/td[11]/a[1]"));
                 sonelement=element;
@@ -162,4 +165,22 @@ public class TawAdminPage {
         }
         return list;
     }
+
+    //AdminPage >>> SolPanelList >>> Packages >>> AddNewPackagesPage >>> DescriptionTextBox
+    @FindBy(xpath = "//*[@id=\"content\"]/div/form/div/div[2]/div[4]/div/div[3]/div[2]")
+    public  WebElement packagesDescriptionTextBox;
+
+    //AdminPage >>> SolPanelList >>> Packages >>> AddNewPackagesPage >>> Onay
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement newPackagesOnay;
+
+    //AdminPage >>> SolPanelList >>> Packages >>> Listede daha önceki test'ten oluşturulan package locate!
+    @FindBy(xpath = "//*[text()='New Test Packages']")
+    public WebElement packageLocate;
+
+    //AdminPage >>> SolPanelList >>> Packages >>> EditButton
+    @FindBy(xpath = "//*[@class='btn btn-warning btn-sm']")
+    public WebElement packageEditButton;
+
+
 }
