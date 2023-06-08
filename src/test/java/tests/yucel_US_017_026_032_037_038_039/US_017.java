@@ -49,6 +49,8 @@ public class US_017 {
         //5. Sağ üst kısımda "Alert" geldiği doğrulanmalı
         softAssert.assertTrue(tawUserHomePage.alertOnay.isDisplayed());
 
+        softAssert.assertAll();
+
         Driver.closeDriver();
     }
 }
