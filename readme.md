@@ -23,6 +23,7 @@
 
 ### Product Backlog
 [Google Drive Product Backlog](https://docs.google.com/spreadsheets/d/1ozC8VUnRSgpOZPU05U-xbZ8fXWeqPfn-/edit?usp=sharing&ouid=114703901017972802489&rtpof=true&sd=true)
+[Test Case Döküman](https://docs.google.com/spreadsheets/d/1yM8XfR8A6ttx1ZbmAEgmJ-rkz2eAZMrGnYRxMsayIQI/edit?usp=sharing)
 
 <br/>
 
