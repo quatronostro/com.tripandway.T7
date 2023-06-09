@@ -138,6 +138,7 @@ public class US_029 {
         alert.accept();
         // 7- Blog sayfasının başarı ile silindiği mesajının görünürlüğü doğrulanır
         Assert.assertTrue(tawAdminPage.newPackagesOnay.isDisplayed());
+
         Driver.closeDriver();
     }
 }

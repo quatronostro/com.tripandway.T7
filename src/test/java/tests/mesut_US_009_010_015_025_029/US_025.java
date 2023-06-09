@@ -104,6 +104,7 @@ public class US_025 {
         jsExecutor.executeScript("window.scrollTo(0, 2000);");
         // User kullanıcı adı ve şifre girilerek login butonuna basılır
         tawUserHomePage.tawUserAccountLogin();
+
         // 3- Dashboard sayfasında, "Payment History" linki olduğu doğrulanmalı ve tıklanmalıdır
         Assert.assertTrue(tawUserDashboard.paymetHistorysElement.isDisplayed());
         tawUserDashboard.paymetHistorysElement.click();
