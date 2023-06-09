@@ -84,6 +84,7 @@ public class US_025 {
         actions.sendKeys(ConfigReader.getProperty("creditCardCvcNumber")).sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
         Driver.getDriver().switchTo().defaultContent(); // Iframe' den cikis
         ReusableMethods.wait(5);
+        Assert.assertTrue(tawUserHomePage.paymentSuccesfulMesssage.isDisplayed());
         Driver.closeDriver();
     }
 

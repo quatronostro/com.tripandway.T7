@@ -1205,5 +1205,10 @@ public class TawUserHomePage {
     @FindBy(xpath = "//div[@class='toast toast-success']")
     public WebElement alertOnay;
 
+
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement paymentSuccesfulMesssage;
+
+
 }
 
