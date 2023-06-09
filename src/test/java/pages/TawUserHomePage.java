@@ -1274,6 +1274,93 @@ public class TawUserHomePage {
 
 //
 //
+    //*******************************MA***********************************
+
+    //HomePage >>> Header Bölümü >>> FAQ Sayfasının Linki
+    @FindBy(xpath = "(//a[text()='FAQ'])[2]")
+    public WebElement homePageFAQLink;
+
+    @FindBy(xpath = "//div//h1[text()='FAQ']")
+    public WebElement FAQPageTitle;
+    @FindBy(xpath = "//button[@aria-controls='collapse1']")
+    public WebElement FAQPageOge1;
+    @FindBy(xpath = "//button[@aria-controls='collapse2']")
+    public WebElement FAQPageOge2;
+    @FindBy(xpath = "//button[@aria-controls='collapse3']")
+    public WebElement FAQPageOge3;
+    @FindBy(xpath = "//button[@aria-controls='collapse4']")
+    public WebElement FAQPageOge4;
+    @FindBy(xpath = "//button[@aria-controls='collapse5']")
+    public WebElement FAQPageOge5;
+    @FindBy(xpath = "//button[@aria-controls='collapse6']")
+    public WebElement FAQPageOge6;
+    @FindBy(xpath = "//button[@aria-controls='collapse7']")
+    public WebElement FAQPageOge7;
+    @FindBy(xpath = "//button[@aria-controls='collapse8']")
+    public WebElement FAQPageOge8;
+    @FindBy(xpath = "//button[@aria-controls='collapse9']")
+    public WebElement FAQPageOge9;
+    @FindBy(xpath = "//button[@aria-controls='collapse10']")
+    public WebElement FAQPageOge10;
+
+    @FindBy(xpath = "(//div[@class='accordion-body'])[1]")
+    public WebElement FAQPageParagraf1;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[2]")
+    public WebElement FAQPageParagraf2;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[3]")
+    public WebElement FAQPageParagraf3;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[4]")
+    public WebElement FAQPageParagraf4;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[5]")
+    public WebElement FAQPageParagraf5;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[6]")
+    public WebElement FAQPageParagraf6;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[7]")
+    public WebElement FAQPageParagraf7;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[8]")
+    public WebElement FAQPageParagraf8;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[9]")
+    public WebElement FAQPageParagraf9;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[10]")
+    public WebElement FAQPageParagraf10;
+
+    @FindBy(xpath = "//*[@class='wpcc-btn']")
+    public WebElement cookyElement;
+
+    //*******************************MA***********************************
+
+    //Homepage >>>> LoginPage >>>> Email Text Box
+    @FindBy(xpath = "//input[@name='traveller_email']")
+    public WebElement homeEmailbox;
+    //Homepage >>>> LoginPage >>>> Password Text Box
+    @FindBy(xpath = "//input[@name='traveller_password']")
+    public WebElement homePassBox;
+    //Homepage >>>> LoginPage >>>> Login Button
+    @FindBy(xpath = "//button[@name='form1']")
+    public WebElement homePageLoginButton;
+    //Homepage >>>> Login Link
+    @FindBy(xpath = "//*[text()='Login']")
+    public WebElement homePageLoginLink;
+    //Homepage >>>> LoginPage >>>> Logout Button
+    @FindBy(xpath = "//*[text()='Logout']")
+    public WebElement loginPageLogoutButton;
+    //Homepage >>>> LoginPage >>>> Dashboard Link
+    @FindBy(xpath = "//*[text()='Dashboard']")
+    public WebElement loginPageDasboardlink;
+
+    public static TawUserHomePage tawUserHomePage;
+
+    public static void tawHomePageAccountGiris(){
+
+        tawUserHomePage = new TawUserHomePage();
+
+        tawUserHomePage.homeEmailbox.sendKeys("m.taskiran1@outlook.com");
+        tawUserHomePage.homePassBox.sendKeys("M.t7123489");
+        tawUserHomePage.homePageLoginButton.click();
+    }
+
+    //*******************************MA***********************************
+
 
 
 

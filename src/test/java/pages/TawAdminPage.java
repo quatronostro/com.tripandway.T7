@@ -343,6 +343,90 @@ public class TawAdminPage {
 //    @FindBy(xpath = "//*[@class='btn btn-danger btn-sm']")
 //    public WebElement blogDeleteSuccessfulyMessage;
 
+    //**************************MA*********************************************
+    //AdminPage >>> SolPanelList >>> DestinationsButton     **MY**
+    @FindBy(xpath = "//li[@class='nav-item '][5]")
+    public WebElement destinationsButton;
+
+    //AdminPage >>> SolPanelList >>> Destinations >>> AddNewButton
+    @FindBy(xpath = "//div[@class='float-right d-inline']")
+    public WebElement destinationsAddNewButton;
+
+    //AdminPage >>> SolPanelList >>> Destinations >>> AddNewButton >>> DestinationsNameBox
+    @FindBy(xpath = "//input[@name='d_name']")
+    public WebElement destinationsNameBox;
+
+    //AdminPage >>> SolPanelList >>> Destinations >>> AddNewDestinationsPage >>> ChooseFileButton
+    @FindBy(xpath = "//input[@name='d_photo']")
+    public WebElement destinationsChooseFileButton;
+
+    //AdminPage >>> SolPanelList >>> Destinations >>> AddNewDestinationsPage >>> SubmitButton
+    @FindBy(xpath = "//*[@type='submit']")
+    public WebElement destinationsSubmitButton;
+
+    //AdminPage >>> SolPanelList >>> Destinations >>> AddNewDestinationsPage >>> IntroductionsBox
+    @FindBy(xpath = "(//div[@class='note-editing-area'])[1]")
+    public WebElement destinationsIntroductionBox;
+
+    //AdminPage >>> SolPanelList >>> Destinations >>> AddNewDestinationsPage >>> SuccessfullyAdded Alert
+    @FindBy(xpath = "//*[@id='page-top']")
+    public WebElement destinationsAddedSuccessfully;
+
+    //AdminPage >>> SolPanelList >>> Destinations >>> DestinationsEditPage >>> DestinationsTable
+    @FindBy(xpath = "//*[@id=\"dataTable\"]/tbody//td[3]")
+    public List<WebElement> bodyElement;
+
+    @FindBy(xpath = "//*[text()='Next']")
+    public WebElement destinationsEditPageNextButton;
+
+    @FindBy(xpath = "//*[@name='d_name']")
+    public WebElement destinationsEditNameBox;
+
+    //AdminPage >>> SolPanelList >>> Destinations >>> DestinationsEditPage >>> DestinationsUpdateButton
+    @FindBy(xpath = "//button[text()='Update']")
+    public WebElement destinationsUpdateButton;
+
+    //AdminPage >>> SolPanelList >>> Destinations >>> DestinationsEditPage >>> EditSuccessfully Alert
+    @FindBy(xpath = "//*[@id='page-top']")
+    public WebElement destinationsEditSuccessfully;
+
+    //HomePage >>> Navbar >>> FAQ Button
+    @FindBy(xpath = "(//*[text()='FAQ'])[2]")
+    public WebElement FAQPageButton;
+
+    //AdminPage >>> SolPanelList >>> GeneralSettingLink
+    @FindBy(xpath = "//*[text()='General Settings']")
+    public WebElement destinationsGeneralSettingLink;
+    //AdminPage >>> SolPanelList >>> GeneralSettingPage
+    @FindBy(xpath = "(//*[@class='bg-white py-2 collapse-inner rounded'])[1]")
+    public WebElement destinationsGenSetPage;
+    //AdminPage >>> SolPanelList >>> PageSettingLink
+    @FindBy(xpath = "//*[text()='Page Settings']")
+    public WebElement destinationsPageSettingLink;
+    //AdminPage >>> SolPanelList >>> PageSettingPage
+    @FindBy(xpath = "(//*[@class='bg-white py-2 collapse-inner rounded'])[2]")
+    public WebElement destinationsPageSetPage;
+    //AdminPage >>> SolPanelList >>> PaymentSettingLink
+    @FindBy(xpath = "//*[text()='Payment Settings']")
+    public WebElement destinationsPaymentSettingLink;
+    //AdminPage >>> SolPanelList >>> PaymentSettingPage
+    @FindBy(xpath = "(//*[@class='bg-white py-2 collapse-inner rounded'])[3]")
+    public WebElement destinationsPaySetPage;
+    //AdminPage >>> SolPanelList >>> DynamicPageLink
+    @FindBy(xpath = "//*[text()='Dynamic Pages']")
+    public WebElement destinationsDynamicPageLink;
+    //AdminPage >>> SolPanelList >>> LanguagePageLink
+    @FindBy(xpath = "//*[text()='Language']")
+    public WebElement destinationsLanguagePageLink;
+    //AdminPage >>> SolPanelList >>> Website Section Link
+    @FindBy(xpath = "//*[text()='Website Section']")
+    public WebElement destinationsWebSitSectionLink;
+    //AdminPage >>> SolPanelList >>> Website Section Page
+    @FindBy(xpath = "(//*[@class='bg-white py-2 collapse-inner rounded'])[5]")
+    public WebElement destinationsWebSitSecPage;
+    //AdminPage >>> SolPanelList >>> Email Template Link
+    @FindBy(xpath = "//*[text()='Email Template']")
+    public WebElement destinationsEmailTempLink;
 
 
 
