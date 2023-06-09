@@ -1158,5 +1158,134 @@ public class TawUserHomePage {
     //Homepage >>> AlertOnay
     @FindBy(xpath = "//div[@class='toast toast-success']")
     public WebElement alertOnay;
-}
 
+    //Homepage >>> HomeButon
+    @FindBy(xpath = "//*[@id=\"menu\"]/li[1]/a")
+    public WebElement homeButon;
+
+    //Homepage >>> ServicesButon
+    @FindBy(xpath ="//*[@id=\"menu\"]/li[2]/a" )
+    public WebElement servicesButon;
+
+    //Homepage >>> DestınatıonsButon
+    @FindBy(xpath = "//*[@id=\"menu\"]/li[3]/a")
+    public WebElement destinationsButon;
+
+    //Homepage >>> PackagesButon
+    @FindBy(xpath = "//*[@id=\"menu\"]/li[4]")
+    public WebElement packagesButon;
+
+    //Homepage >>> AboutUsButon
+    @FindBy(xpath = "//*[@id=\"menu\"]/li[5]/a")
+    public WebElement aboutUsButon;
+
+    //Homepage >>> BlogButon
+    @FindBy(xpath = "//*[@id=\"menu\"]/li[7]/a")
+    public WebElement blogButon;
+
+    //Homepage >>> FaqButon
+    @FindBy(xpath = "//*[@id=\"menu\"]/li[6]/a")
+    public WebElement faqButon;
+
+    //Homepage >>> ContactButon
+    @FindBy(xpath = "//*[@id=\"menu\"]/li[8]/a")
+    public WebElement contactButon;
+
+    //Homepage >>> TelNo
+    @FindBy(xpath = "/html/body/div[4]/div/div/div[1]/div/p[1]")
+    public WebElement telNo;
+
+    //Homepage >>> EmailAddress
+    @FindBy(xpath = "/html/body/div[4]/div/div/div[1]/div/p[2]")
+    public WebElement emailAddress;
+
+    //Homepage >>> Footer >>> LatestPacagesTest
+    @FindBy(xpath = "//*[text()='Latest Packages']")
+    public  WebElement latestPacageTest;
+
+    //Homepage >>>Footer >>> LatestPacages >>> ListeninBirinciElementi
+    @FindBy(xpath = "/html/body/div[16]/div/div/div[2]/div/ul/li[1]")
+    public WebElement latestPacagesBirinciElement;
+
+    //Homepage >>>Footer >>> LatestPacages >>> ListeniIkinciElementi
+    @FindBy(xpath = "/html/body/div[16]/div/div/div[2]/div/ul/li[2]")
+    public WebElement latestPacagesIkinciElement;
+
+    //Homepage >>> Footer >>> LatestPacages >>> ListeninUcuncuElementi
+    @FindBy(xpath = "/html/body/div[16]/div/div/div[2]/div/ul/li[3]")
+    public WebElement latestPacagesUcuncuElement;
+
+    //Homepage >>> Footer >>> LatestPacages >>> ListeninDorduncuElementi
+    @FindBy(xpath = "/html/body/div[16]/div/div/div[2]/div/ul/li[4]")
+    public WebElement latestPacagesDorduncuElement;
+
+    //Homepage >>> Footer >>> LatestPacages >>> ListeninBesinciElementi
+    @FindBy(xpath = "/html/body/div[16]/div/div/div[2]/div/ul/li[5]")
+    public WebElement latestPacagesBesinciElement;
+
+    //Homepage >>> Footer >>> RecentPostTest
+    @FindBy(xpath = "/html/body/div[16]/div/div/div[3]/div/h3")
+    public WebElement RecentPostTest;
+
+    //Homepage >>> Footer >>> RecentPostTest >>> ListeninBirinciElementi
+    @FindBy(xpath = "/html/body/div[16]/div/div/div[3]/div/ul/li[1]")
+    public WebElement recentPostBirinciElement;
+
+
+    //Homepage >>> Footer >>> RecentPostTest >>> ListeninIkinciElementi
+    @FindBy(xpath = "/html/body/div[16]/div/div/div[3]/div/ul/li[2]")
+    public WebElement recentPostIkinciElement;
+
+
+
+    //Homepage >>> Footer >>> RecentPostTest >>> ListeninUcuncuElementi
+    @FindBy(xpath = "/html/body/div[16]/div/div/div[3]/div/ul/li[3]")
+    public WebElement recentPostUcuncuElement;
+
+
+
+    //Homepage >>> Footer >>> RecentPostTest >>> ListeninDorduncuElementi
+    @FindBy(xpath = "/html/body/div[16]/div/div/div[3]/div/ul/li[4] ")
+    public WebElement recentPostDorduncuElemnt;
+
+
+
+    //Homepage >>> Footer >>> RecentPostTest >>> ListeninBesinciElementi
+    @FindBy(xpath = "/html/body/div[16]/div/div/div[3]/div/ul/li[5]")
+    public WebElement recentPostBesinciElement;
+
+
+   //Homepage >>> Packages >>> IcerikBirinciElement
+   @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[1]/div[2]/a/span[1]")
+   public WebElement packagesIcerikBirinciElement;
+
+
+    //Homepage >>> Packages >>> IcerikIkınciElment
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[2]/div[1]/div[2]")
+    public WebElement packagesIcerikIkinciElement;
+
+
+    //Homepage >>> Packages >>> IcerikUcuncuElement
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[3]/div[1]/div[2]")
+    public WebElement packagesIcerikUcuncuElement;
+
+
+    //Homepage >>> Packages >>> IcerikDorduncuElement
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[4]/div[1]/div[2]")
+    public WebElement packagesIcerikDorduncuElement;
+
+
+    //Homepage >>> Packages >>> IcerikBesinciElement
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[5]/div[1]/div[2]")
+    public WebElement packagesIcerikBesinciElement;
+
+
+    //Homepage >>> Packages >>> IcerikAltıncıElement
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[6]/div[2]/a")
+    public WebElement packagesIcerikAltinciElement;
+
+
+    //Homepage >>> Packages >>> IcerikYedinciElement
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[7]/div[1]/div[2]")
+    public WebElement packagesIcerikYedinciElement;
+}
