@@ -4,22 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TawUserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
-
-import java.time.Duration;
-import java.util.Arrays;
 import java.util.List;
 
-public class US_015 {
+class US_015 {
     /*
         About Us sayfasının sayfasının görünürlüğü kontrol edilemeli.
         Ulaşılabilir tüm öğelerin görünebilir olduğu doğrulanmalı
@@ -27,7 +20,7 @@ public class US_015 {
 
     private JavascriptExecutor jsExecutor;
     @Test
-    public void tc_01() {
+    public void TC_01() {
         // 1- https://qa.tripandway.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("tawUrl"));
         TawUserHomePage tawUserHomePage = new TawUserHomePage();
@@ -51,18 +44,15 @@ public class US_015 {
         Assert.assertEquals(actualTitle, expectedTitle);
 
         // 4- "Hakkımızda" sayfasında, şirket genel bilgiler bulunmalıdır.
-        // Bu bilgiler, OUR MISSION ve OUR VISION gibi konuları kapsadığı içerik kontrol edilmelidir.
+        // Bu bilgiler, OUR MISSION başlığı bulunduğu içerik kontrol edilmelidir.
         String expectedPageSubtext = "OUR MISSION";
         String actualPageSubtext = tawUserHomePage.aboutUsPageSubtext.getText();
         System.out.println(actualPageSubtext);
         Assert.assertEquals(actualPageSubtext,expectedPageSubtext);
 
         // 5- Tüm öğelerin (metinler, görseller, bağlantılar vb.) görüntülenmesi gerekmektedir.
-        // Sayfa yüklenirken, herhangi bir eksik veya hatalı öğe olmamalıdır.
         // About Us sayfasındaki tüm erişilebilir öğelerin görüntülenip görüntülenmediğini kontrol etmek için gerekli
-        // Örneğin, sayfadaki tüm başlıkları (h1, h2, h3 vb.) kontrol etmek için aşağıdaki kodu kullanabilirsiniz:
         scrollPageToBottom(Driver.getDriver());
-
         // Sayfadaki tüm öğeler Body altında olduğu için Body altındaki her tag'ı List'e ekliyoruz
         List<WebElement> allElements = Driver.getDriver().findElements(By.xpath("//body//*"));
 
@@ -74,7 +64,6 @@ public class US_015 {
         }
         Driver.closeDriver();
     }
-
     // Sayfanın gözüken alanlarının tag'ları aktif olacağından dolayı tüm sayfayı
     // scroll yaparak aşağıya doğru kaydırıyoruz.
     // Böylece tag'lar aktif oluyor

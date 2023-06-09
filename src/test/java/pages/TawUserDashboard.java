@@ -17,7 +17,7 @@ public class TawUserDashboard {
     public WebElement paymetHistorysElement;
 
     // User Dashboad >>> Payment History
-    @FindBy(xpath = "//*[text()='View All Payments']")
+    @FindBy(xpath = "/html/body/div[6]/div/div/div[2]/div")
     public WebElement viewAllPaymenstTitle;
 
     @FindBy(xpath = "//tbody/tr[2]/td[5]")
@@ -36,6 +36,7 @@ public class TawUserDashboard {
 
     @FindBy(xpath = "//tbody/tr[11]/td[2]")
     public WebElement orderDetailPaymentStatusElement;
+
 
     // User Dashboad >>> Update Profile Title
     @FindBy(xpath = "/html/body/div[6]/div/div/div[1]/div/ul/li[3]/a")
@@ -120,22 +121,66 @@ public class TawUserDashboard {
     @FindBy(xpath = "/html/head")
     public WebElement successfullyTitle;
 
-    // User Dashboad >>> Update Profile >>> LoginButonu
-    @FindBy(xpath = "// User Dashboad >>> Update Profile >>>")
-    public WebElement loginButonu;
+ 
 
+    //HomePage >>> UserLoginButton
+    @FindBy(xpath = "/html/body/div[4]/div/div/div[2]/div/a[2]")
+    public WebElement userLoginButton;
 
+    public static TawUserHomePage tawUserLogin;
 
+    public static void tawUserAccountLogin(){
 
+        tawUserLogin = new TawUserHomePage();
 
+        tawUserLogin.userEmailTextbox.sendKeys(ConfigReader.getProperty("userEmail"));
+        tawUserLogin.userPasswordTextbox.sendKeys(ConfigReader.getProperty("userPass"));
+        tawUserLogin.userLoginSubmitButton.click();
+    }
 
+    //User Dashboard >>> Payment History >>> TableFirstRow
+    @FindBy(xpath = "/html/body/div[6]/div/div/div[2]/div/div/table/tbody/tr[1]")
+    public WebElement paymentDashboardTableFirstRow;
 
+    //User Dashboard >>> Header >>> PackagesButton
+    @FindBy(xpath = "//*[@id=\"menu\"]/li[4]")
+    public WebElement headerPackagesButton;
 
+    //UserDashboard >>> Header >>> Packages >>> Package
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[3]/div[2]")
+    public WebElement somePackageButton;
 
+    //UserDashboard >>> Header >>> Packgaes >>>PackagesBodyText
+    @FindBy(xpath = "/html/body/div[7]/div/div")
+    public WebElement packagesBodyText;
 
+    //UserDashboard >>> Header >>> Packages >>> BookYourSeatButton
+    @FindBy(xpath = "/html/body/div[7]/div/div/div[2]/div/div[2]/div/form/div[2]/button")
+    public WebElement packagesBookYourSeatButton;
 
+    //UserDashboard >>> Header >>> Packages >>> BookYourSeatButton >>> Payment PageBodyText
+    @FindBy(xpath = "/html/body/div[7]/div/div/div")
+    public WebElement packagesPaymentBodyText;
 
+    //UserDashboard >>> Header >>> Packages >>> BookYourSeatButton >>> PayWithCardButton
+    @FindBy(className = "stripe-button-el")
+    public WebElement packagesPaymentPayWithCardButton;
 
+    //UserDashboard >>> Header >>> Packages >>> BookYourSeat >>> PayWithCard >>> CardNumberBox
+    @FindBy(id = "card_number")
+    public WebElement cardNumberBox;
+
+    //UserDashboard >>> Header >>> Packages >>> BookYourSeat >>> PayWithCard >>> CardExpDayBox
+    @FindBy(xpath = "//*[@id=\"cc-exp\"]")
+    public WebElement cardExpDayBox;
+
+    //UserDashboard >>> Header >>> Packages >>> BookYourSeat >>> PayWithCard >>> CardCCVBox
+    @FindBy(xpath = "//*[@id=\"cc-csc\"]")
+    public WebElement cardCCVBox;
+
+    //UserDashboard >>> Header >>> Packages >>> BookYourSeat >>> PayWithCard >>> PayButton
+    @FindBy(xpath = "//*[@id=\"submitButton\"]/span/span")
+    public WebElement payButton;
 
 
 }

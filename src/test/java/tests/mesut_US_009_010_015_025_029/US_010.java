@@ -16,7 +16,7 @@ public class US_010 {
      */
 
     @Test
-    public void tc_01() {
+    public void TC_01() {
         // 1- https://qa.tripandway.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("tawUrl"));
         TawUserHomePage tawUserHomePage = new TawUserHomePage();
@@ -40,7 +40,6 @@ public class US_010 {
 
         // Sekme olarak açılan sayfanın title başlığını kontrol eder
         ReusableMethods.switchToWindow("Terms and Conditions");
-        // String expectedTitle="Terms and Conditions";
         String expectedTitle = ConfigReader.getProperty("termsAndConditionsTitle");
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);

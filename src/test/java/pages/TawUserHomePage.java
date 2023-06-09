@@ -594,7 +594,7 @@ public class TawUserHomePage {
     public WebElement newsletterEmailSubmitAlertMessage;
 
     //HomePage >>> Coockies Accept Button
-    @FindBy(xpath = "//button[@type='button']")
+    @FindBy(xpath = "//button[@class='wpcc-btn']")
     public WebElement  websiteUsesCookiesButton;
 
     //HomePage >>> Terms and Conditions Element
@@ -1147,6 +1147,52 @@ public class TawUserHomePage {
     @FindBy(xpath = "//button[@class='wpcc-btn']")
     public WebElement buttonHomePageBodyAcceptCookieButton;
 
+
+    //HomePage >>> Header login buttonu
+    @FindBy(xpath = "(//div[@class='top-header-right'])/a[2]")
+    public WebElement buttonHeaderLoginButtonu;
+
+    //HomePage >>> Login Page email address Text box
+    @FindBy(xpath = "//input[@name='traveller_email']")
+    public WebElement loginPageEmailAdressTextBox;
+
+    //HomePage >>> Login Page password Text Box
+    @FindBy(xpath = "//input[@name='traveller_password']")
+    public WebElement loginPagePasswordTextBox;
+
+    //HomePage >>> Login Page login buttonu
+    @FindBy(xpath = "//button[text()='Login']")
+    public WebElement buttonLoginPageLoginButtonu;
+
+    //UserDashboard >>> Dashboard buttonu
+    @FindBy(xpath = "//div[@class='top-header-right']")
+    public WebElement buttonUserDashboardDashboardButtonu;
+
+    //Header >>> header kısmı tripandway logosu
+    @FindBy(xpath = "//img[@alt='Logo']")
+    public WebElement logoUserDashboardTripAndWayLogosu;
+
+    //Footer >>> Adress bölümünün tamamı
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]")
+    public WebElement footerAddressBolumunTamami;
+
+    //Footer >>> Adress bölümünün baslik texti
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]/div/h3")
+    public WebElement labelFooterAddressBaslikTexti;
+
+    //Footer >>> Adress bölümünün birinci satır texti
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]/div/div[1]/div[2]")
+    public WebElement labelFooterAddressBirinciSatirTexti;
+
+    //Footer >>> Adress bölümünün Ikinci satır texti
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]/div/div[2]/div[2]")
+    public WebElement labelFooterAddressIkinciSatirTexti;
+
+    //Footer >>> Adress bölümünün Ucuncu satır texti
+    @FindBy(xpath = "(//div[@class='row'])[26]/div[4]/div/div[3]/div[2]")
+    public WebElement labelFooterAddressUcuncuSatirTexti;
+
+
     //HomePage >>> header >>>> ContactButton
     @FindBy(xpath = "//*[@id=\"menu\"]/li[8]/a")
     public WebElement contactButton;
@@ -1158,6 +1204,165 @@ public class TawUserHomePage {
     //Homepage >>> AlertOnay
     @FindBy(xpath = "//div[@class='toast toast-success']")
     public WebElement alertOnay;
+
+
+    // Homepage >>> Packages >>> İlgili Tur >>> Turu satın aldıktan sonra çıkan mesaj
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement paymentSuccesfulMesssage;
+
+    //HomePage >>> Header >>> DestinationsButton
+    @FindBy(xpath = "//*[@id=\"menu\"]/li[3]/a")
+    public WebElement destinationsButton;
+
+    //HomePage >>> Destinations >>> AllDestinations
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[1]/div[2]")
+    public WebElement destinationFirstButton;
+
+    //HomePage >>> Destinations >>> AllDestinations
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[2]/div[2]")
+    public WebElement destinationSecondButton;
+
+    //HomePage >>> Destinations >>> AllDestinations
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[3]/div[2]")
+    public WebElement destinationThirdButton;
+
+
+//
+//    //Homepage>>>>footer kısmı facebook ikon
+//
+//    @FindBy(className = "fab fa-facebook-f")
+//    public WebElement HomepageFooterFacebookIkon;
+
+
+    //Homepage>>>>footer kısmı Twitter ikon
+
+    @FindBy(xpath = "//div[16]/div/div/div[4]/div/ul/li[2]/a/i")
+    public WebElement HomepageFooterTwitterIkon;
+
+
+
+    //Homepage>>>>footer kısmı Linkedin ikon
+
+    @FindBy(xpath = "//div/div[4]/div/ul/li[3]/a/i")
+    public WebElement HomepageFooterLinkedinIkon;
+
+
+    //Homepage>>>>footer kısmı Prinerest ikon
+
+    @FindBy(xpath = "//div[4]/div/ul/li[4]/a")
+    public WebElement HomepageFooterPrinterestIkon;
+
+
+    //Homepage>>>>footer kısmı Instagram ikon
+
+    @FindBy(xpath = "//div[4]/div/ul/li[5]/a/i")
+    public WebElement HomepageFooterInstagramIkon;
+
+
+    //Homepage>>>footer kısmı Privacy Policy
+
+    @FindBy(xpath ="//a[@href=\"https://qa.tripandway.com/privacy-policy\"]")
+    public WebElement HomePageFooterPravcyPolicy;
+
+    @FindBy(xpath = "//a[@href=\"https://qa.tripandway.com/traveller/register\"]")
+    public WebElement labelRegistrationgiris;
+
+//
+//    @FindBy(className = "footer-social")
+//    public WebElement HomePageFooterSosyalMedya;
+
+
+//
+//
+    //*******************************MA***********************************
+
+    //HomePage >>> Header Bölümü >>> FAQ Sayfasının Linki
+    @FindBy(xpath = "(//a[text()='FAQ'])[2]")
+    public WebElement homePageFAQLink;
+
+    @FindBy(xpath = "//div//h1[text()='FAQ']")
+    public WebElement FAQPageTitle;
+    @FindBy(xpath = "//button[@aria-controls='collapse1']")
+    public WebElement FAQPageOge1;
+    @FindBy(xpath = "//button[@aria-controls='collapse2']")
+    public WebElement FAQPageOge2;
+    @FindBy(xpath = "//button[@aria-controls='collapse3']")
+    public WebElement FAQPageOge3;
+    @FindBy(xpath = "//button[@aria-controls='collapse4']")
+    public WebElement FAQPageOge4;
+    @FindBy(xpath = "//button[@aria-controls='collapse5']")
+    public WebElement FAQPageOge5;
+    @FindBy(xpath = "//button[@aria-controls='collapse6']")
+    public WebElement FAQPageOge6;
+    @FindBy(xpath = "//button[@aria-controls='collapse7']")
+    public WebElement FAQPageOge7;
+    @FindBy(xpath = "//button[@aria-controls='collapse8']")
+    public WebElement FAQPageOge8;
+    @FindBy(xpath = "//button[@aria-controls='collapse9']")
+    public WebElement FAQPageOge9;
+    @FindBy(xpath = "//button[@aria-controls='collapse10']")
+    public WebElement FAQPageOge10;
+
+    @FindBy(xpath = "(//div[@class='accordion-body'])[1]")
+    public WebElement FAQPageParagraf1;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[2]")
+    public WebElement FAQPageParagraf2;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[3]")
+    public WebElement FAQPageParagraf3;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[4]")
+    public WebElement FAQPageParagraf4;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[5]")
+    public WebElement FAQPageParagraf5;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[6]")
+    public WebElement FAQPageParagraf6;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[7]")
+    public WebElement FAQPageParagraf7;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[8]")
+    public WebElement FAQPageParagraf8;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[9]")
+    public WebElement FAQPageParagraf9;
+    @FindBy(xpath = "(//div[@class='accordion-body'])[10]")
+    public WebElement FAQPageParagraf10;
+
+    @FindBy(xpath = "//*[@class='wpcc-btn']")
+    public WebElement cookyElement;
+
+    //*******************************MA***********************************
+
+    //Homepage >>>> LoginPage >>>> Email Text Box
+    @FindBy(xpath = "//input[@name='traveller_email']")
+    public WebElement homeEmailbox;
+    //Homepage >>>> LoginPage >>>> Password Text Box
+    @FindBy(xpath = "//input[@name='traveller_password']")
+    public WebElement homePassBox;
+    //Homepage >>>> LoginPage >>>> Login Button
+    @FindBy(xpath = "//button[@name='form1']")
+    public WebElement homePageLoginButton;
+    //Homepage >>>> Login Link
+    @FindBy(xpath = "//*[text()='Login']")
+    public WebElement homePageLoginLink;
+    //Homepage >>>> LoginPage >>>> Logout Button
+    @FindBy(xpath = "//*[text()='Logout']")
+    public WebElement loginPageLogoutButton;
+    //Homepage >>>> LoginPage >>>> Dashboard Link
+    @FindBy(xpath = "//*[text()='Dashboard']")
+    public WebElement loginPageDasboardlink;
+
+    public static TawUserHomePage tawUserHomePage;
+
+    public static void tawHomePageAccountGiris(){
+
+        tawUserHomePage = new TawUserHomePage();
+
+        tawUserHomePage.homeEmailbox.sendKeys("m.taskiran1@outlook.com");
+        tawUserHomePage.homePassBox.sendKeys("M.t7123489");
+        tawUserHomePage.homePageLoginButton.click();
+    }
+
+    //*******************************MA***********************************
+
+
+
 
     //Homepage >>> HomeButon
     @FindBy(xpath = "//*[@id=\"menu\"]/li[1]/a")
