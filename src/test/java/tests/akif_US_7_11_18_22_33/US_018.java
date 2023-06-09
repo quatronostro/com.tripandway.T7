@@ -69,6 +69,7 @@ public class US_018 extends TestBaseReport {
 
         //Geçerli kullanıcı bilgileri girerek kayıt olunabildiği doğrulanır.
 
+
         isim.sendKeys(faker.name().fullName());
         eMail.sendKeys(faker.internet().emailAddress());
         sifre.sendKeys(faker.internet().password());
