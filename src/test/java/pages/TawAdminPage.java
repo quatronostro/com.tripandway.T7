@@ -249,6 +249,52 @@ public class TawAdminPage {
     @FindBy(xpath = "//*[@id=\"content\"]/nav/ul/li[2]/div/a[2]")
     public WebElement changePhotoButton;
 
+    // AdminPage >>> Blog Section Menu
+    @FindBy(xpath = "//a[@aria-controls='collapseBlog']")
+    public WebElement blogSectionMenu;
+
+    // AdminPage  >>> Blog Seciton Menu >>> Blogs Elemneti
+    @FindBy(xpath = "//a[text()=\'Blogs\']")
+    public WebElement blogsElement;
+
+    // AdminPage  >>> Blog Seciton Menu >>> Add New Button
+    @FindBy(xpath = "//div[@class='container-fluid']/div/div/div/a")
+    public WebElement blogsAddNewButton;
+
+    // AdminPage  >>> Blog Seciton Menu >>> Search Textbox
+    @FindBy(xpath = "//input[@type='search']")
+    public WebElement blogsSearchTextBox;
+
+    // AdminPage  >>> Blog Seciton Menu >>> Add New Button >>> Add Blog
+    @FindBy(xpath = "//input[@name='blog_title']")
+    public WebElement addBlogNameTextBox;
+
+    @FindBy(xpath = "//input[@name='blog_slug']")
+    public WebElement addBlugSlugTextbox;
+    @FindBy(xpath = "//input[@name='blog_photo']")
+    public WebElement blogChooseFileButton;
+
+    @FindBy(xpath = "//h6[text()='Edit Blog']")
+    public WebElement blogEditPageViewTitle;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement blogAddSubmitButton;
+
+    @FindBy(xpath = "//div[@class='toast toast-success']")
+    public WebElement newBlogAddSuccessfulyMessage;
+
+    @FindBy(xpath = "//*[@id=\"dataTable\"]/tbody/tr/td[5]/a[1]")
+    public WebElement blogEditButton;
+
+    @FindBy(xpath = "//*[@id=\"dataTable\"]/tbody/tr/td[5]/a[2]")
+    public WebElement blogDeleteButton;
+
+    @FindBy(xpath = "//*[@class='btn btn-danger btn-sm']")
+    public WebElement blogDeleteSuccessfulyMessage;
+
+
+
+
 
     //AdminPage >>> adminProfileDropDownMenu >>>  logout button
     @FindBy(xpath = "(//a[@class='dropdown-item'])[3]")

@@ -42,13 +42,13 @@ public class US_025 {
         // User kullanıcı adı ve şifre girilerek login butonuna basılır
         tawUserHomePage.tawUserAccountLogin();
 
-        // Package Sayfasına gidilir ve bir paket 7 Days Istanbul paketine tıklanır
+        // 3- Package Sayfasına gidilir ve bir paket 7 Days Istanbul paketine tıklanır
         tawUserHomePage.packageElement.click();
         jsExecutor.executeScript("window.scrollTo(0, 500);");
         ReusableMethods.wait(1);
         tawUserHomePage.istanbulIn7DaysPackageElement.click();
 
-        // Istanbul paketinde kisi sayisi belirienir ve BookYourSeatButton butonuna tiklanir
+        // 4- Istanbul paketinde kisi sayisi belirienir ve BookYourSeatButton butonuna tiklanir
         jsExecutor.executeScript("window.scrollTo(0, 500);");
         WebElement dropdownMenuElementi = Driver.getDriver().findElement(By.xpath("//*[@id='numberPerson']"));
         Select select = new Select(dropdownMenuElementi);
@@ -56,20 +56,24 @@ public class US_025 {
         select.selectByValue("3");
         tawUserHomePage.paymentBookYourSeatButton.click();
 
-        // Tur adı ve fiyat bilgisinin değerleri okunur ve kredi kart ödeme butonuna basilir
+        // 5- Tur adı ve fiyat bilgisinin değerleri okunur ve kredi kart ödeme butonuna basilir
         ReusableMethods.wait(1);
         jsExecutor.executeScript("window.scrollTo(0, 500);");
+        // Tur paket adı ismi okunur
         expectedPackageTitle = tawUserHomePage.bookinDetailPackageName.getText();
         System.out.println(expectedPackageTitle);
+        // Tur Toplam fiyat bilgisi okunur
         expectedTotalPaid = tawUserHomePage.bookingDetailTotalPaidUsd.getText();
         System.out.println(expectedTotalPaid);
         jsExecutor.executeScript("window.scrollTo(0, 500);");
         ReusableMethods.wait(1);
+        // 6- Kart ile ödeme işlemi gerçeşetirmek için butona basılır
         tawUserHomePage.payWithCardButton.click();
 
-        // Kart bilgileri girilir ve Pay butonuna basilir
+        // 7- Kart bilgileri girilir ve Pay butonuna basilir
         ReusableMethods.wait(1);
         Actions actions = new Actions(Driver.getDriver());
+        // Kart bilgilerini girmek için Iframe'e geçiş yapmak gerekiyor.
         WebElement frameElementi = Driver.getDriver().findElement(By.name("stripe_checkout_app"));
         Driver.getDriver().switchTo().frame(frameElementi);
         String creditCardNumber = "4242 4242 4242 4242"; // Tam kredi kartı numarası
@@ -80,6 +84,7 @@ public class US_025 {
         actions.sendKeys(ConfigReader.getProperty("creditCardCvcNumber")).sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
         Driver.getDriver().switchTo().defaultContent(); // Iframe' den cikis
         ReusableMethods.wait(5);
+
 
         //java.util.List<WebElement> frames = Driver.getDriver().findElements(By.tagName("frame"));
         //frames.addAll(Driver.getDriver().findElements(By.tagName("iframe")));
@@ -104,6 +109,7 @@ public class US_025 {
 
          */
 
+
         Driver.closeDriver();
     }
 
@@ -125,6 +131,7 @@ public class US_025 {
         tawUserHomePage.tawUserAccountLogin();
 
 
+
         /*
 
         if (login) {
@@ -137,30 +144,28 @@ public class US_025 {
         }
         */
 
+
         // 3- Dashboard sayfasında, "Payment History" linki olduğu doğrulanmalı ve tıklanmalıdır
         Assert.assertTrue(tawUserDashboard.paymetHistorysElement.isDisplayed());
         tawUserDashboard.paymetHistorysElement.click();
         // 4- View All Payments bölümünün açıldığı görülmelidir.
         ReusableMethods.wait(2);
         Assert.assertTrue(tawUserDashboard.viewAllPaymenstTitle.isDisplayed());
-        // 5- Tabloda kayıt olduğu doğrulanmalıdır
+        //List<WebElement> satirElementleriList = Driver.getDriver().findElements(By.xpath("//tbody/tr[2]"));
 
-        // Tablodaki satır sayısını gösterir
-
-        List<WebElement> satirElementleriList = Driver.getDriver().findElements(By.xpath("//tbody/tr[2]"));
-
+        // 5- Packaged Title isminin satın alına form bilgileri ile
+        // payment history tablosundaki bilgiler ile eşleşmesi kontrol ediliyor
         System.out.println("============================");
-        /*
-        String expectedUsdText = expectedTotalPaid;
-        String actualUsdText = actualTotalPaid;
-        String expectedPackageName = expectedPackageTitle;
-        String actualPackageName = tawUserHomePage.bookinDetailPackageName;
-         */
         ReusableMethods.wait(2);
         actualPackageTitle = tawUserDashboard.paymentHistoryPagePackageName.getText();
         Assert.assertTrue(actualPackageTitle.contains(expectedPackageTitle));
         System.out.println(expectedPackageTitle + " ---Expected Package Title");
         System.out.println(actualPackageTitle + " ---Actual Package Title");
+
+
+        // Package ismi eşlesiyorsa Action butonuna basarak Order Detail sayfasında bulunan
+        // Toplam fiyat bilgisinin eşlemesi ve ödeme bilgisinin Complate olduğu doğrulanıyor
+
 /*
         for (WebElement eachSatir : satirElementleriList
         ) {
@@ -171,10 +176,11 @@ public class US_025 {
             System.out.println("============================");
         }
 */
+
         tawUserDashboard.viewAllPaymentsActionButton.click();
         ReusableMethods.wait(1);
         jsExecutor.executeScript("window.scrollTo(0, 200);");
-        List<WebElement> orderDetailList = Driver.getDriver().findElements(By.xpath("//tbody/tr/td[2]"));
+        //List<WebElement> orderDetailList = Driver.getDriver().findElements(By.xpath("//tbody/tr/td[2]"));
         actualTotalPaid = tawUserDashboard.orderDetailPaidAmountElement.getText();
         System.out.println(expectedTotalPaid + " ---Expected Total paid");
         System.out.println(actualTotalPaid + " --- Actual Total paid");
@@ -184,7 +190,6 @@ public class US_025 {
         Assert.assertEquals(actualPaymentsStatus,expectedPaymentStatus);
         System.out.println(expectedPaymentStatus + " ---Expected Payment Status");
         System.out.println(actualPaymentsStatus + " ---Actual Payment Status");
-
 
         Driver.quitDriver();
     }

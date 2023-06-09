@@ -38,8 +38,6 @@ public class US_029 {
         String dosyaYolu= herkesteFarkliOlan+herkesteAyniOlan;
         tawAdminPage.blogChooseFileButton.sendKeys(dosyaYolu);
         Actions actions = new Actions(Driver.getDriver());
-
-        //tawAdminPage.addBlugSlugTextbox.sendKeys("Test");
         actions.click(tawAdminPage.addBlogNameTextBox)
                 .sendKeys(ConfigReader.getProperty("addBlogNameTextBox"))
                 .sendKeys(Keys.TAB)
@@ -56,19 +54,13 @@ public class US_029 {
                 .sendKeys(Keys.TAB)
                 .sendKeys(ConfigReader.getProperty("addSeoInformationMetaDescriptionTextBox")).perform();
                 //.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform(); // Submit butonuna basıyoruz
-
-               //ReusableMethods.wait(10);
         // 6- Submit butonuna basılır
         tawAdminPage.blogAddSubmitButton.click();
         ReusableMethods.wait(2);
         // 7- Blog sayfasının başarı ile kaydedildiği mesajının görünürlüğü doğrulanmalıdır
         Assert.assertTrue(tawAdminPage.newBlogAddSuccessfulyMessage.isDisplayed());
-
         Driver.closeDriver();
-
-
     }
-
     @Test
     public void test02(){
 
@@ -87,14 +79,11 @@ public class US_029 {
         tawAdminPage.packageEditButton.click();
         Assert.assertTrue(tawAdminPage.blogEditPageViewTitle.isDisplayed());
         // 6- Düzenlenecek blog bilgileri ilgli alanlara girilir
-        // 5- Eklenecek blog bilgileri ilgli alanlara girilir
         String herkesteFarkliOlan = System.getProperty("user.dir");
-        String herkesteAyniOlan = "/src/test/java/utilities/filesForUpload/board-361516_640.jpg";
+        String herkesteAyniOlan = "/src/test/java/utilities/filesForUpload/board-361516_640 - Copy.jpg";
         String dosyaYolu= herkesteFarkliOlan+herkesteAyniOlan;
         tawAdminPage.blogChooseFileButton.sendKeys(dosyaYolu);
         Actions actions = new Actions(Driver.getDriver());
-
-
         ReusableMethods.wait(1);
         actions.click(tawAdminPage.addBlogNameTextBox)
                 .keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL)
@@ -120,14 +109,12 @@ public class US_029 {
         ReusableMethods.wait(1);
         //.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform(); // Submit butonuna basıyoruz
 
-        // 6- Submit butonuna basılır
+        // 7- Submit butonuna basılır
         tawAdminPage.blogAddSubmitButton.click();
-        ReusableMethods.wait(2);
-        // 7- Blog sayfasının başarı ile kaydedildiği mesajının görünürlüğü doğrulanmalıdır
+        ReusableMethods.wait(1);
+        // 8- Blog sayfasının başarı ile kaydedildiği mesajının görünürlüğü doğrulanmalıdır
         Assert.assertTrue(tawAdminPage.newBlogAddSuccessfulyMessage.isDisplayed());
-
         Driver.closeDriver();
-
     }
 
     @Test
@@ -144,7 +131,6 @@ public class US_029 {
         // 4- Search Textbox'a düzenlenecek blog adı yazılır
         tawAdminPage.blogsSearchTextBox.sendKeys(ConfigReader.getProperty("editBlogNameTextBox"));
         ReusableMethods.wait(1);
-
         // 5- Silinecek blog'un Delete butonuna tıklanır
         tawAdminPage.blogDeleteButton.click();
         // 6- Çıkan uyarı mesajında Tamam butonuna basılır
