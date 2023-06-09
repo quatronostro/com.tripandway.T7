@@ -1222,11 +1222,11 @@ public class TawUserHomePage {
     public WebElement destinationThirdButton;
 
 
-
-    //Homepage>>>>footer kısmı facebook ikon
-
-    @FindBy(className = "fab fa-facebook-f")
-    public WebElement HomepageFooterFacebookIkon;
+//
+//    //Homepage>>>>footer kısmı facebook ikon
+//
+//    @FindBy(className = "fab fa-facebook-f")
+//    public WebElement HomepageFooterFacebookIkon;
 
 
     //Homepage>>>>footer kısmı Twitter ikon
@@ -1262,12 +1262,13 @@ public class TawUserHomePage {
     @FindBy(xpath = "//a[@href=\"https://qa.tripandway.com/traveller/register\"]")
     public WebElement labelRegistrationgiris;
 
+//
+//    @FindBy(className = "footer-social")
+//    public WebElement HomePageFooterSosyalMedya;
 
-    @FindBy(className = "footer-social")
-    public WebElement HomePageFooterSosyalMedya;
 
-
-
+//
+//
 
 
 
