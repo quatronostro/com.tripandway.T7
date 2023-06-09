@@ -66,7 +66,7 @@ public class US_018 extends TestBaseReport {
         //Geçerli kullanıcı bilgileri girerek kayıt olunabildiği doğrulanır.
 
         isim.sendKeys("Akif Sen");
-        eMail.sendKeys("tobojos287@rockdian.com");
+        eMail.sendKeys("nopofah345@ratedane.com");
         sifre.sendKeys("Team.113");
         loginButonu.click();
         Thread.sleep(500);
