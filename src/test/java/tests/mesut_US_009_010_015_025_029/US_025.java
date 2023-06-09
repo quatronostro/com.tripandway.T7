@@ -27,7 +27,7 @@ public class US_025 {
     String actualTotalPaid = null;
 
     @Test
-    public void tc_01() {
+    public void TC_01() {
         // 1- http://qa.tripandway.com sayfasina gidilir
         Driver.getDriver().get(ConfigReader.getProperty("tawUrl"));
         tawUserDashboard = new TawUserDashboard();
@@ -89,7 +89,7 @@ public class US_025 {
     }
 
     @Test
-    public void tc_02() {
+    public void TC_02() {
 
         // 1- http://qa.tripandway.com sayfasina gidilir
         Driver.getDriver().get(ConfigReader.getProperty("tawUrl"));

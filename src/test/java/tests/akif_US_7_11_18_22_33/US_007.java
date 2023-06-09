@@ -18,7 +18,7 @@ public class US_007 extends TestBaseReport {
 
     @Test
 
-    public void SMedyaIkonTest() throws InterruptedException {
+    public void TC_01_SMedyaIkonTest() throws InterruptedException {
 
         extentTest = extentReports.createTest("Sosyal Medya Ikonları Testi");
         //tripandway anasayfasına git.
@@ -95,7 +95,7 @@ public class US_007 extends TestBaseReport {
 
     @Test
 
-    public void facebookTest() throws InterruptedException {
+    public void TC_02_facebookTest() throws InterruptedException {
 
         extentTest = extentReports.createTest("Facebook Bağlantı Testi");
 
@@ -175,7 +175,7 @@ public class US_007 extends TestBaseReport {
 
 
     @Test
-    public void twitterTest() throws InterruptedException {
+    public void TC_03_twitterTest() throws InterruptedException {
 
         extentTest = extentReports.createTest("Twitter Bağlantı Testi");
 
@@ -246,7 +246,7 @@ public class US_007 extends TestBaseReport {
 
 
     @Test
-    public void linkedinTest() throws InterruptedException {
+    public void TC_04_linkedinTest() throws InterruptedException {
 
         extentTest = extentReports.createTest("LinkedIn Bağlantı Testi");
 
@@ -316,7 +316,7 @@ public class US_007 extends TestBaseReport {
 
 
     @Test
-    public void prinerestTest() throws InterruptedException {
+    public void TC_05_prinerestTest() throws InterruptedException {
 
         extentTest = extentReports.createTest("Printerest Bağlantı Testi");
 
@@ -387,7 +387,7 @@ public class US_007 extends TestBaseReport {
     }
 
     @Test
-    public void instagramTest() throws InterruptedException {
+    public void TC_06_instagramTest() throws InterruptedException {
 
         extentTest = extentReports.createTest("Instagram Bağlantı Testi");
 

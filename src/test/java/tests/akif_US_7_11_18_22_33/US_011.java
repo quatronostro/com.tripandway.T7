@@ -16,7 +16,7 @@ public class US_011  extends TestBaseReport {
 
 
     @Test
-    public void PrivayPolicyGoruntulemeTesti() throws InterruptedException {
+    public void TC_01_PrivayPolicyGoruntulemeTesti() throws InterruptedException {
 
         extentTest =extentReports.createTest("GizlilikPolitikasıTesti");
 

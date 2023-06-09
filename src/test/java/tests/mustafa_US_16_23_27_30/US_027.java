@@ -7,7 +7,7 @@ import pages.TawAdminPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US_27 {
+public class US_027 {
     TawAdminPage tawAdminPage;
 
     @Test

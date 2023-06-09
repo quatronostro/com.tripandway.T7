@@ -18,7 +18,7 @@ public class US_018 extends TestBaseReport {
     //US_018>>>> "Kullanıcı olarak siteye kayıt olabilmeliyim ve Girdiğim bilgiler gerekli kriterleri sağlamazsa gerekli uyarıları alabilmeliyim"
 
     @Test
-    public void Test() throws InterruptedException {
+    public void TC_01() throws InterruptedException {
         faker = new Faker();
 
         extentTest =extentReports.createTest("GizlilikPolitikasıTesti");

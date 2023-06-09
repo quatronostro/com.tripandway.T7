@@ -62,7 +62,7 @@ public class US_029 {
         Driver.closeDriver();
     }
     @Test
-    public void test02(){
+    public void TC_02(){
 
         tawAdminPage = new TawAdminPage();
         //1. Webdriver çalıştırılarak "https://qa.tripandway.com/admin" sayfasına gidilir
@@ -118,7 +118,7 @@ public class US_029 {
     }
 
     @Test
-    public void test03(){
+    public void TC_03(){
 
         tawAdminPage = new TawAdminPage();
         //1. Webdriver çalıştırılarak "https://qa.tripandway.com/admin" sayfasına gidilir
