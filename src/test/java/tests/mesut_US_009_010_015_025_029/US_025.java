@@ -84,32 +84,7 @@ public class US_025 {
         actions.sendKeys(ConfigReader.getProperty("creditCardCvcNumber")).sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
         Driver.getDriver().switchTo().defaultContent(); // Iframe' den cikis
         ReusableMethods.wait(5);
-
-
-        //java.util.List<WebElement> frames = Driver.getDriver().findElements(By.tagName("frame"));
-        //frames.addAll(Driver.getDriver().findElements(By.tagName("iframe")));
-        /*
-        // Her bir frame'i kontrol ederek alert mesajını yakalayın
-        for (WebElement frame : frames) {
-            try {
-                Driver.getDriver().switchTo().frame(frame);
-                Alert alert = Driver.getDriver().switchTo().alert();
-
-                // Alert mesajının metnini kontrol edin
-                if (alert.getText().contains("Kart kaydesilsin mi?")) {
-                    // Alert mesajına "Hayır" yanıtını verin
-                    alert.dismiss();
-                }
-                break;
-            } catch (Exception e) {
-                // Frame'e geçiş yapamazsa bir sonraki frame'i kontrol etmek için devam edin
-                continue;
-            }
-        }
-
-         */
-
-
+        Assert.assertTrue(tawUserHomePage.paymentSuccesfulMesssage.isDisplayed());
         Driver.closeDriver();
     }
 
@@ -130,21 +105,6 @@ public class US_025 {
         // User kullanıcı adı ve şifre girilerek login butonuna basılır
         tawUserHomePage.tawUserAccountLogin();
 
-
-
-        /*
-
-        if (login) {
-            Assert.assertTrue(tawUserHomePage.dashboardElement.isDisplayed(), "Dashboard elementi görüntülenmiyor.");
-            tawUserHomePage.dashboardElement.click();
-        } else {
-            Assert.assertTrue(tawUserHomePage.userLoginElement.isDisplayed(), "Kullanıcı giriş elementi görüntülenmiyor.");
-            tawUserHomePage.userLoginElement.click();
-            tawUserHomePage.tawUserAccountLogin();
-        }
-        */
-
-
         // 3- Dashboard sayfasında, "Payment History" linki olduğu doğrulanmalı ve tıklanmalıdır
         Assert.assertTrue(tawUserDashboard.paymetHistorysElement.isDisplayed());
         tawUserDashboard.paymetHistorysElement.click();
@@ -162,21 +122,8 @@ public class US_025 {
         System.out.println(expectedPackageTitle + " ---Expected Package Title");
         System.out.println(actualPackageTitle + " ---Actual Package Title");
 
-
         // Package ismi eşlesiyorsa Action butonuna basarak Order Detail sayfasında bulunan
         // Toplam fiyat bilgisinin eşlemesi ve ödeme bilgisinin Complate olduğu doğrulanıyor
-
-/*
-        for (WebElement eachSatir : satirElementleriList
-        ) {
-            if (actualPackageTitle.contains(expectedPackageTitle)) {
-                eachSatir.getText();
-                System.out.println(actualPackageTitle);
-            }
-            System.out.println("============================");
-        }
-*/
-
         tawUserDashboard.viewAllPaymentsActionButton.click();
         ReusableMethods.wait(1);
         jsExecutor.executeScript("window.scrollTo(0, 200);");
@@ -190,7 +137,6 @@ public class US_025 {
         Assert.assertEquals(actualPaymentsStatus,expectedPaymentStatus);
         System.out.println(expectedPaymentStatus + " ---Expected Payment Status");
         System.out.println(actualPaymentsStatus + " ---Actual Payment Status");
-
         Driver.quitDriver();
     }
 }

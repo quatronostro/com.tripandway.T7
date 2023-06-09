@@ -1205,6 +1205,11 @@ public class TawUserHomePage {
     @FindBy(xpath = "//div[@class='toast toast-success']")
     public WebElement alertOnay;
 
+
+    // Homepage >>> Packages >>> İlgili Tur >>> Turu satın aldıktan sonra çıkan mesaj
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement paymentSuccesfulMesssage;
+
     //HomePage >>> Header >>> DestinationsButton
     @FindBy(xpath = "//*[@id=\"menu\"]/li[3]/a")
     public WebElement destinationsButton;
@@ -1269,6 +1274,7 @@ public class TawUserHomePage {
 
 //
 //
+
 
 
 
