@@ -1,13 +1,8 @@
 package tests.aziz_US_001_003_004_012;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.SourceType;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TawUserHomePage;
@@ -15,11 +10,9 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import java.time.Duration;
 import java.util.Set;
-import java.util.SortedMap;
 
-public class C07_US_003_TeamMembers {
+public class C07_US_003_HomePageTeamMembers {
 
 
     // US_003 >>> Bir ziyaretçi olarak Home page sayfasının body bölümündeki fonksiyonların
