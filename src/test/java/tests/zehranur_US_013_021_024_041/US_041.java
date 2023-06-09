@@ -34,7 +34,7 @@ public class US_041 {
         String expectedTawTitle = ConfigReader.getProperty("homePageTitle");
         String actualTawTitle = Driver.getDriver().getTitle();
 
-        Assert.assertEquals(expectedTawTitle,actualTawTitle);
+        Assert.assertEquals(expectedTawTitle,actualTawTitle); //False alıcak çünkü bug var
 
         Driver.quitDriver();
     }

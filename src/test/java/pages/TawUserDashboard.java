@@ -17,7 +17,7 @@ public class TawUserDashboard {
     public WebElement paymetHistorysElement;
 
     // User Dashboad >>> Payment History
-    @FindBy(xpath = "//*[text()='View All Payments']")
+    @FindBy(xpath = "/html/body/div[6]/div/div/div[2]/div")
     public WebElement viewAllPaymenstTitle;
 
     @FindBy(xpath = "//tbody/tr[2]/td[5]")

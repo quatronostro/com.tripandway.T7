@@ -6,6 +6,8 @@ import org.testng.asserts.SoftAssert;
 import pages.TawUserDashboard;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.JSUtilities;
+import utilities.ReusableMethods;
 
 public class US_021 {
     TawUserDashboard tawUserDashboard;
@@ -34,6 +36,7 @@ public class US_021 {
 
         //6. Payment History Tıklandıktan sonra View All Payments texti ve
         // altındaki tabloda Serial Order No Price Currency Package Destination Payment Status Action bilgileri görülebilmelidir.
+        ReusableMethods.wait(2);
         Assert.assertTrue(tawUserDashboard.viewAllPaymenstTitle.isDisplayed());
 
         Assert.assertTrue(tawUserDashboard.paymentDashboardTableFirstRow.isDisplayed());
