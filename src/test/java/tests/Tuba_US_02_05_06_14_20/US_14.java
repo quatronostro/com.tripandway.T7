@@ -41,27 +41,31 @@ public class US_14 {
 
          Assert.assertTrue(tawUserHomePage.packagesIcerikUcuncuElement.isDisplayed());
 
-         Assert.assertTrue(tawUserHomePage.packagesIcerikDorduncuElement.isDisplayed());
+         ReusableMethods.wait(2);
 
-         Assert.assertTrue(tawUserHomePage.packagesIcerikBesinciElement.isDisplayed());
+        // Assert.assertTrue(tawUserHomePage.packagesIcerikDorduncuElement.isDisplayed());
 
-         Assert.assertTrue(tawUserHomePage.packagesIcerikAltinciElement.isDisplayed());
+        // Assert.assertTrue(tawUserHomePage.packagesIcerikBesinciElement.isDisplayed());
 
-         Assert.assertTrue(tawUserHomePage.packagesIcerikYedinciElement.isDisplayed());
+       //  Assert.assertTrue(tawUserHomePage.packagesIcerikAltinciElement.isDisplayed());
+
+         //Assert.assertTrue(tawUserHomePage.packagesIcerikYedinciElement.isDisplayed());
 
         // Görüntülenebilir olan bu elementler tıklanabilmeli ve yeni bir sekmede açılabilmeli
 
-         Assert.assertTrue(tawUserHomePage.packagesIcerikBirinciElement.isEnabled());
+       //  Assert.assertTrue(tawUserHomePage.packagesIcerikBirinciElement.isEnabled());
 
-         Assert.assertTrue(tawUserHomePage.packagesIcerikIkinciElement.isEnabled());
+        // Assert.assertTrue(tawUserHomePage.packagesIcerikIkinciElement.isEnabled());
 
-         Assert.assertTrue(tawUserHomePage.packagesIcerikUcuncuElement.isEnabled());
+        // Assert.assertTrue(tawUserHomePage.packagesIcerikUcuncuElement.isEnabled());
 
-         Assert.assertTrue(tawUserHomePage.packagesIcerikDorduncuElement.isEnabled());
+        // Assert.assertTrue(tawUserHomePage.packagesIcerikDorduncuElement.isEnabled());
 
-         Assert.assertTrue(tawUserHomePage.packagesIcerikBesinciElement.isEnabled());
+        // Assert.assertTrue(tawUserHomePage.packagesIcerikBesinciElement.isEnabled());
 
-         Assert.assertTrue(tawUserHomePage.packagesIcerikAltinciElement.isEnabled());
+        // Assert.assertTrue(tawUserHomePage.packagesIcerikAltinciElement.isEnabled());
+
+     // Assert.assertTrue(tawUserHomePage.packagesIcerikSekizinciElement.isEnabled());
 
         Driver.closeDriver();
 

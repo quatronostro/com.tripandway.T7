@@ -37,9 +37,14 @@ public class TawUserDashboard {
     @FindBy(xpath = "//tbody/tr[11]/td[2]")
     public WebElement orderDetailPaymentStatusElement;
 
+    // User Dashboad >>> Update Profile Title
+    @FindBy(xpath = "/html/body/div[6]/div/div/div[1]/div/ul/li[3]/a")
+    public WebElement updateProfilTitle;
+
+
     // User Dashboad >>> Update Profile
     @FindBy(xpath = "/html/body/div[6]/div/div/div[1]/div/ul/li[3]/a")
-    public WebElement UpdateProfilSekmesi;
+    public WebElement updateProfilSekmesi;
 
 
     // User Dashboad >>> Update Profile >>> NameTitle

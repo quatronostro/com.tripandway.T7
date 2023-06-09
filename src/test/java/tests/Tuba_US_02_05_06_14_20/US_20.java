@@ -1,5 +1,6 @@
 package tests.Tuba_US_02_05_06_14_20;
 
+import net.bytebuddy.description.annotation.AnnotationSource;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -7,6 +8,7 @@ import pages.TawUserDashboard;
 import pages.TawUserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class US_20 {
     TawUserDashboard tawUserDashboard;
@@ -14,7 +16,7 @@ public class US_20 {
 
     @Test
     public void TC_01(){
-        SoftAssert softAssert=new SoftAssert();
+
         tawUserDashboard =new TawUserDashboard();
         tawUserHomePage=new TawUserHomePage();
 
@@ -24,79 +26,82 @@ public class US_20 {
         //1)Kullanıcı login olduktan sonra "Update Profile" sekmesi görüntülenebilir ve aktif olduğu doğrulanır
         tawUserHomePage.userLoginElement.click();
         TawUserHomePage.tawUserAccountLogin();
-        tawUserDashboard.updateButonu.click();
+        tawUserDashboard.updateProfilSekmesi.click();
+
+        ReusableMethods.wait(2);
+        Assert.assertTrue(tawUserDashboard.updateProfilTitle.isDisplayed());
 
 
         Assert.assertTrue(tawUserDashboard.updateButonu.isDisplayed());
-        softAssert.assertTrue(tawUserDashboard.updateButonu.isEnabled());
+        Assert.assertTrue(tawUserDashboard.updateButonu.isEnabled());
 
         //2)Update Profile sayfasındaki elementlerin görünür ve aktif olduğu doğrulanır
 
-        softAssert.assertTrue(tawUserDashboard.updateProfilCityTitle.isDisplayed());
+        Assert.assertTrue(tawUserDashboard.updateProfilCityTitle.isDisplayed());
 
-        softAssert.assertTrue(tawUserDashboard.updateProfilCityButonu.isDisplayed());
-        softAssert.assertTrue(tawUserDashboard.updateProfilCityButonu.isEnabled());
+        Assert.assertTrue(tawUserDashboard.updateProfilCityButonu.isDisplayed());
+        Assert.assertTrue(tawUserDashboard.updateProfilCityButonu.isEnabled());
 
-        softAssert.assertTrue(tawUserDashboard.updateProfilCountryTitle.isDisplayed());
+        Assert.assertTrue(tawUserDashboard.updateProfilCountryTitle.isDisplayed());
 
-        softAssert.assertTrue(tawUserDashboard.updateProfilCountryButonu.isDisplayed());
-        softAssert.assertTrue(tawUserDashboard.updateProfilCountryButonu.isEnabled());
+        Assert.assertTrue(tawUserDashboard.updateProfilCountryButonu.isDisplayed());
+        Assert.assertTrue(tawUserDashboard.updateProfilCountryButonu.isEnabled());
 
-        softAssert.assertTrue(tawUserDashboard.updateProfileAdressTitle.isDisplayed());
+        Assert.assertTrue(tawUserDashboard.updateProfileAdressTitle.isDisplayed());
 
-        softAssert.assertTrue(tawUserDashboard.updateProfileAdressButonu.isDisplayed());
-        softAssert.assertTrue(tawUserDashboard.updateProfileAdressButonu.isEnabled());
+        Assert.assertTrue(tawUserDashboard.updateProfileAdressButonu.isDisplayed());
+        Assert.assertTrue(tawUserDashboard.updateProfileAdressButonu.isEnabled());
 
-        softAssert.assertTrue(tawUserDashboard.updateProfilEmailAddressTitle.isDisplayed());
+        Assert.assertTrue(tawUserDashboard.updateProfilEmailAddressTitle.isDisplayed());
 
-        softAssert.assertTrue(tawUserDashboard.updateProfilEmailAddressButonu.isDisplayed());
-        softAssert.assertTrue(tawUserDashboard.updateProfilEmailAddressButonu.isEnabled());
-
-
-        softAssert.assertTrue(tawUserDashboard.updateProfileNameTitle.isDisplayed());
-
-        softAssert.assertTrue(tawUserDashboard.updateProfileNameButonu.isDisplayed());
-        softAssert.assertTrue(tawUserDashboard.updateProfileNameButonu.isEnabled());
-
-        softAssert.assertTrue(tawUserDashboard.updateProfilePhoneTitle.isDisplayed());
-
-        softAssert.assertTrue(tawUserDashboard.updatepro.isDisplayed());
-        softAssert.assertTrue(tawUserDashboard.updatepro.isEnabled());
-
-        softAssert.assertTrue(tawUserDashboard.updateProfilStateTitle.isDisplayed());
-
-        softAssert.assertTrue(tawUserDashboard.updateProfilStateButonu.isDisplayed());
-        softAssert.assertTrue(tawUserDashboard.updateProfilStateButonu.isEnabled());
-
-        softAssert.assertTrue(tawUserDashboard.updateProfilZipCodeTitle.isDisplayed());
-
-        softAssert.assertTrue(tawUserDashboard.updateProfilZipCodeButonu.isDisplayed());
-        softAssert.assertTrue(tawUserDashboard.updateProfilZipCodeButonu.isEnabled());
+        Assert.assertTrue(tawUserDashboard.updateProfilEmailAddressButonu.isDisplayed());
+        Assert.assertTrue(tawUserDashboard.updateProfilEmailAddressButonu.isEnabled());
 
 
+        Assert.assertTrue(tawUserDashboard.updateProfileNameTitle.isDisplayed());
+
+        Assert.assertTrue(tawUserDashboard.updateProfileNameButonu.isDisplayed());
+        Assert.assertTrue(tawUserDashboard.updateProfileNameButonu.isEnabled());
+
+        Assert.assertTrue(tawUserDashboard.updateProfilePhoneTitle.isDisplayed());
+
+        Assert.assertTrue(tawUserDashboard.updatepro.isDisplayed());
+        Assert.assertTrue(tawUserDashboard.updatepro.isEnabled());
+
+        Assert.assertTrue(tawUserDashboard.updateProfilStateTitle.isDisplayed());
+
+        Assert.assertTrue(tawUserDashboard.updateProfilStateButonu.isDisplayed());
+        Assert.assertTrue(tawUserDashboard.updateProfilStateButonu.isEnabled());
+
+        Assert.assertTrue(tawUserDashboard.updateProfilZipCodeTitle.isDisplayed());
+
+        Assert.assertTrue(tawUserDashboard.updateProfilZipCodeButonu.isDisplayed());
+        Assert.assertTrue(tawUserDashboard.updateProfilZipCodeButonu.isEnabled());
 
 
-//3)İlgili sayfadaki görünürlüğü doğrulanan elementlere bilgi girişi yapılabildiği doğrulanır
+        //3)İlgili sayfadaki görünürlüğü doğrulanan elementlere bilgi girişi yapılabildiği doğrulanır
 
-   tawUserDashboard.updateProfileNameButonu.sendKeys("Tuba");
+        tawUserDashboard.updateProfileNameButonu.sendKeys("Tuba");
+        tawUserDashboard.updatepro.sendKeys("05476897890");
+        tawUserDashboard.updateProfileAdressButonu.sendKeys("Karacayır Mahallesi");
+        tawUserDashboard.updateProfilCityButonu.sendKeys("Bolu");
+        tawUserDashboard.updateProfilEmailAddressButonu.sendKeys("tub");
+        tawUserDashboard.updateProfilCountryButonu.sendKeys("Türkiye");
+        tawUserDashboard.updateProfilStateButonu.sendKeys("Merkez");
+        tawUserDashboard.updateProfilZipCodeButonu.sendKeys("1400");
 
 
 
+   //4)İlgili sayfada bilgiler doldurulduktan sonra "Update" butonu görüntülenebilir ve tıklanabilir olduğu doğrulanır
 
-
-
-
-
-
-//4)İlgili sayfada bilgiler doldurulduktan sonra "Update" butonu görüntülenebilir ve tıklanabilir olduğu doğrulanır
-
-      softAssert.assertTrue(tawUserDashboard.updateButonu.isDisplayed());
-      softAssert.assertTrue(tawUserDashboard.updateButonu.isEnabled());
+      Assert.assertTrue(tawUserDashboard.updateButonu.isDisplayed());
+      Assert.assertTrue(tawUserDashboard.updateButonu.isEnabled());
+      tawUserDashboard.updateButonu.click();
 
 //5)Profil bilgilerinin düzenlenebildiğine dair yazının görünürlüğü doğrulanır
-      softAssert.assertTrue(tawUserDashboard.successfullyTitle.isDisplayed());
+      Assert.assertTrue(tawUserHomePage.alertOnay.isDisplayed());
 
-        softAssert.assertAll();
+
         Driver.closeDriver();
 
     }

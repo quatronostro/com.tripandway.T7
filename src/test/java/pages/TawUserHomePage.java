@@ -1261,31 +1261,38 @@ public class TawUserHomePage {
 
 
     //Homepage >>> Packages >>> IcerikIkınciElment
-    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[2]/div[1]/div[2]")
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[2]/div[2]/a/span[1]")
     public WebElement packagesIcerikIkinciElement;
 
 
     //Homepage >>> Packages >>> IcerikUcuncuElement
-    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[3]/div[1]/div[2]")
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[3]/div[2]/a/span[1]")
     public WebElement packagesIcerikUcuncuElement;
 
 
     //Homepage >>> Packages >>> IcerikDorduncuElement
-    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[4]/div[1]/div[2]")
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[4]/div[2]/a/span[2]")
     public WebElement packagesIcerikDorduncuElement;
 
 
     //Homepage >>> Packages >>> IcerikBesinciElement
-    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[5]/div[1]/div[2]")
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[6]/div[2]/a/span[1]")
     public WebElement packagesIcerikBesinciElement;
 
 
     //Homepage >>> Packages >>> IcerikAltıncıElement
-    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[6]/div[2]/a")
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[6]/div[2]/a/span[1]")
     public WebElement packagesIcerikAltinciElement;
 
 
     //Homepage >>> Packages >>> IcerikYedinciElement
-    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[7]/div[1]/div[2]")
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[7]/div[2]/a/span[1]")
     public WebElement packagesIcerikYedinciElement;
+
+
+    //Homepage >>> Packages >>> IcerikSekizinciElement
+    @FindBy(xpath = "/html/body/div[7]/div/div[2]/div[8]/div[2]/a/span[1]")
+    public WebElement packagesIcerikSekizinciElement;
+
+
 }
