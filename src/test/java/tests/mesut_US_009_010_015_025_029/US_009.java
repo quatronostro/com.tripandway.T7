@@ -17,7 +17,7 @@ public class US_009 {
 
     private JavascriptExecutor jsExecutor;
     @Test
-    public void tc_01(){
+    public void TC_01(){
         // 1- https://qa.tripandway.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("tawUrl"));
         TawUserHomePage tawUserHomePage = new TawUserHomePage();
