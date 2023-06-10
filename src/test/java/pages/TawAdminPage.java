@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +56,9 @@ public class TawAdminPage {
         tawAdminPage = new TawAdminPage();
 
         tawAdminPage.adminEmailBox.sendKeys(ConfigReader.getProperty("adminEmail1"));
+        ReusableMethods.wait(2);
         tawAdminPage.adminPassBox.sendKeys(ConfigReader.getProperty("adminPass"));
+        ReusableMethods.wait(2);
         tawAdminPage.adminLoginButton.click();
     }
 
@@ -428,7 +431,17 @@ public class TawAdminPage {
     @FindBy(xpath = "//*[text()='Email Template']")
     public WebElement destinationsEmailTempLink;
 
+    @FindBy(xpath = "//*[@id=\"dataTable\"]/tbody/tr[1]/td[2]/div/a")
+    public WebElement seeDetailButton;
 
+    @FindBy(xpath = "//*[@id=\"content\"]/div/div/div/div/div[2]/div/table")
+    public WebElement berkeBaramukText;
+
+    @FindBy(xpath = "//*[@id=\"dataTable\"]/tbody/tr[1]/td[11]/a[2]")
+    public WebElement invoiceButton;
+
+    @FindBy(xpath = "//*[@id=\"content\"]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/div/a")
+    public WebElement printInvoiceButton;
 
 
 }

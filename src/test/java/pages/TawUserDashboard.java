@@ -134,7 +134,9 @@ public class TawUserDashboard {
         tawUserLogin = new TawUserHomePage();
 
         tawUserLogin.userEmailTextbox.sendKeys(ConfigReader.getProperty("userEmail"));
+        ReusableMethods.wait(2);
         tawUserLogin.userPasswordTextbox.sendKeys(ConfigReader.getProperty("userPass"));
+        ReusableMethods.wait(2);
         tawUserLogin.userLoginSubmitButton.click();
     }
 
