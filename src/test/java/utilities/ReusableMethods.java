@@ -44,7 +44,7 @@ public class ReusableMethods {
                 return;
             }
         }
-        Driver.getDriver().switchTo().window(origin);
+        //Driver.getDriver().switchTo().window(origin);
     }
 
     //========Hover Over=====//
